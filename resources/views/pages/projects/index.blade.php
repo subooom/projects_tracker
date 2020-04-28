@@ -21,7 +21,7 @@
       @foreach($errors as $project)
     
       <tr>
-        <td>{{$project['priject_id']}}</td>
+        <td>{{$project['project_id']}}</td>
         <td>{{$project['title']}}</td>
         <td>{{$project['description']}}</td>
         

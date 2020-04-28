@@ -2,8 +2,15 @@
 @section('content')
     <div class="container">
       <h4>Projects Details:</h4><br/>
-      <form method="post" action="{{url('projects')}}" enctype="multipart/form-data">
+      <form method="post" action="{{url('create')}}" enctype="multipart/form-data">
         @csrf
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+            <label for="Name">Project_ID:</label>
+            <input type="id" class="form-control" name="id">
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
@@ -18,7 +25,6 @@
               <input type="text" class="form-control" name=desc>
             </div>
           </div>
-    
         </div>
         </div>
         <div class="row">

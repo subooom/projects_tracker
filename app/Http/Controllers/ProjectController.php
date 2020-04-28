@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\project;
+
 
 class ProjectController extends Controller
 {
@@ -30,7 +30,8 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return view('create');
+        return view('pages.projects.create');
+
     }
 
     /**
@@ -41,19 +42,35 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasfile('filename'))
-         {
-            $file = $request->file('filename');
-            $name=time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/', $name);
-         }
-        $project= new \App\Project;
-        $project->title=$request->get('title');
-        $project->description=$request->get('description');
-        $project->save();
-        
-        return redirect('projects')->with('success', 'Information has been added');
-    }
+
+
+         $project = new\App\project;
+         $project->project_id= $request->input('project_id');
+         $project->title= $request->input('title');
+         $project->description= $request->input('description');
+         $project->save();
+         session()->flash('msg','new project added successfully!');
+         return redirect()->route('projects.show',$project->id);
+       
+        }
+    
+     
+
+    //     if($request->hasfile('filename'))
+    //      {
+    //         $file = $request->file('filename');
+    //         $name=time().$file->getClientOriginalName();
+
+    //      }
+    //     $project= new \App\project;
+    //     $project->project_id = $request->input('project_id');
+    //     $project->title=$request->input('title');
+    //     $project->description=$request->input('description');
+    //     $project->save();
+    //    return redirect('pages.projects.index')->with('success', 'Information has been added');
+    // }
+
+
     /**
      * Display the specified resource.
      *
@@ -87,11 +104,12 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project= \App\Project::find($id);
+        $project->project_id=$request->get('project_id');
         $project->title=$request->get('title');
         $project->description=$request->get('description');
         $project->save();
-      
-        return redirect('projects');
+           return redirect('pages.projects.create');
+  
     }
 
     /**
@@ -105,3 +123,4 @@ class ProjectController extends Controller
        
     }
 }
+?>

@@ -8,6 +8,13 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
+            <label for="Name">Project_ID:</label>
+            <input type="id" class="form-control" name="id" value="{{$project->id}}>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
             <label for="name">Title:</label>
             <input type="text" class="form-control" name="name" value="{{$project->name}}">
           </div>

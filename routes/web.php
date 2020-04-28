@@ -19,5 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','ProjectController@index');
 Route::get('/about','PagesController@about');
-Route::resource('projects/index','ProjectController');
+// Route::resource('projects/index','ProjectController');
+Route::get('/create','ProjectController@create');
+Route::post('/update/{id}','ProjectController@update');
+Route::post('/create','ProjectController@store');
 Route::get('/task','taskController@task');
