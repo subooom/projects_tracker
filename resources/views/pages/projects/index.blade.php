@@ -1,12 +1,26 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
-    <br />
-    @if (\Session::has('success'))
-      <div class="alert alert-success">
-        <p>{{ \Session::get('success') }}</p>
-      </div><br />
-     @endif
+
+<div class="row">
+  <div class="col-lg-12 margin-tb" style="margin-top:15px">
+      <div class="pull-left">
+          <h5>Project Tracker</h5>
+      </div>
+
+      <div class="pull-right">
+          <a class="btn btn-success" href="/create">Create New Project</a>
+      </div>
+  </div>
+</div>
+
+
+@if ($message=Session::get('success'))
+
+<div class="alert alert-success">
+<p>{{$message}}</p>
+</div>
+@endif
+
     <table class="table table-striped">
     <thead>
       <tr>
@@ -18,24 +32,26 @@
     </thead>
     <tbody>
       
-      @foreach($errors as $project)
-    
-      <tr>
-        <td>{{$project['project_id']}}</td>
-        <td>{{$project['title']}}</td>
-        <td>{{$project['description']}}</td>
+      @foreach ($projects as $project)
+   <tr>
+   <td>{{ $project->project_id}}</td>
+   <td>{{$project->title}}</td>
+    <td>{{$project->description}}</td> 
+      <td>
         
-        <td><a href="{{action('ProjectController@edit', $project['id'])}}" class="btn btn-warning">Edit</a></td>
-        <td>
-          <form action="{{action('ProjecttController@destroy', $project['id'])}}" method="post">
+        <td><a href="{{action('ProjectController@edit', $project['project_id'])}}" class="btn btn-warning">Edit</a></td>
+        {{-- <td>
+          <form action="{{action('ProjecttController@destroy', $project['project_id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
             <button class="btn btn-danger" type="submit">Delete</button>
           </form>
-        </td>
+        </td> --}}
       </tr>
       @endforeach
     </tbody>
   </table>
+ 
+
 @endsection
 

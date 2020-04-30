@@ -42,33 +42,18 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-
-
-         $project = new\App\project;
-         $project->project_id= $request->input('project_id');
-         $project->title= $request->input('title');
-         $project->description= $request->input('description');
-         $project->save();
-         session()->flash('msg','new project added successfully!');
-         return redirect()->route('projects.show',$project->id);
        
-        }
-    
-     
-
-    //     if($request->hasfile('filename'))
-    //      {
-    //         $file = $request->file('filename');
-    //         $name=time().$file->getClientOriginalName();
-
-    //      }
-    //     $project= new \App\project;
-    //     $project->project_id = $request->input('project_id');
-    //     $project->title=$request->input('title');
-    //     $project->description=$request->input('description');
-    //     $project->save();
-    //    return redirect('pages.projects.index')->with('success', 'Information has been added');
-    // }
+        $request->validate([
+            'title'=> 'required',
+            'description'=>'required',
+        ]);
+          
+        $project= new \App\project;
+        $project->title=$request->input('title');
+        $project->description=$request->input('description');
+        $project->save();
+       return redirect('pages.projects.index')->with('success', 'Information has been added');
+    }
 
 
     /**
@@ -104,7 +89,6 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $project= \App\Project::find($id);
-        $project->project_id=$request->get('project_id');
         $project->title=$request->get('title');
         $project->description=$request->get('description');
         $project->save();
@@ -118,9 +102,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Project $project)
     {
-       
+        $project->delete();
+        return redirect('pages.projects.index')->with('success',"projects deleted successfully.");
     }
 }
 ?>
