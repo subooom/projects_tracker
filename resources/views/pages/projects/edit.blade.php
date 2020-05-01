@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
-
+<div class="container " >
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 margin-tb "style=" margin-top: 50px">
         <div class="pull-left">
-            <h2>Edit a Project</h2>
+            <h4>Edit a Project</h4>
         </div>
 
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{route('pages.projects.index')}}">Back</a>
+            <a class="btn btn-primary" href="/">Back</a>
         </div>
     </div>
 </div>
@@ -28,18 +28,18 @@
 </div>
 @endif
 
-<form action={{route('pages.projects.update','$project->project_id')}} method="POST">
+<form action={{url('update'), '$project->project_id' }}method="POST">
     @csrf
     <div class="row">
-        <div class="col-xs-12 col-md-12 col-sm-12">
+        <div class=" col-md-6 ">
         <div class="form-group ">
           <strong>Title:</strong>
-          <input type="text" class="form-control"   name="title" value="{{'$project->title'}}" placeholder="Title">
+          <input class="form-control"  tyep="text" name="title" value="{{'$project->title'}}" placeholder="Title">
         </div>
       </div>
     </div>
       <div class="row">  
-        <div class="col-xs-12 col-md-12 col-sm-12">
+        <div class=" col-md-6 ">
           <div class="form-group">
             <strong>Description:</strong>
           <textarea class="form-control" name="description" value="{{'$project->description'}}" style="height:150px" placeholder="Description"></textarea>
@@ -48,11 +48,13 @@
       </div>
       </div>
       <div class="row">    
-        <div class="col-xs-12 col-md-12 col-sm-12" text="center" style="left:200px">  
+        <div class="col-md-6 " text="center" style="left:125px">  
             <div class="form-group">
-          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success">UPDATE</button>
          </div>
     </div>
 </div>
 </form>
+</div>
+
 @endsection

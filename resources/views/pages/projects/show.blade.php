@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 margin-tb" style="margin-top: 50px">
         <div class="pull-left">
-            <h2>Show Project</h2>
+            <h4>Show Project</h4>
         </div>
 
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{route('projects.index')}}">Back</a>
+            <a class="btn btn-primary" href="/">Back</a>
         </div>
     </div>
 </div>
@@ -25,7 +25,7 @@
     <div class="col-xs-12 col-md-12 col-sm-12">
       <div class="form-group">
         <strong>Description:</strong>
-        {{ '$project->description' }}
+        {{ '$project->description '}}
       </div>
     </div>
   </div>

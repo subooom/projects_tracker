@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-lg-12 margin-tb" style="margin-top:15px">
       <div class="pull-left">
-          <h5>Project Tracker</h5>
+          <h5>PROJECTS</h5>
       </div>
 
       <div class="pull-right">
@@ -21,7 +21,7 @@
 </div>
 @endif
 
-    <table class="table table-striped">
+    <table class="table table-striped table-hover ">
     <thead>
       <tr>
         <th>Project_ID</th>
@@ -36,22 +36,23 @@
    <tr>
    <td>{{ $project->project_id}}</td>
    <td>{{$project->title}}</td>
-    <td>{{$project->description}}</td> 
-      <td>
+    <td>{{$project->description}}</td>  
+        <td>
+          <form action="{{action('ProjectController@destroy', $project['project_id'])}}" method="post">
+           
+        <a href="{{action('ProjectController@edit', $project['project_id'])}}" class="btn btn-warning">Edit</a>
         
-        <td><a href="{{action('ProjectController@edit', $project['project_id'])}}" class="btn btn-warning">Edit</a></td>
-        {{-- <td>
-          <form action="{{action('ProjecttController@destroy', $project['project_id'])}}" method="post">
-            @csrf
-            <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Delete</button>
+        <a href="{{action('ProjectController@show', $project['project_id'])}}" class="btn btn-warning">Show</a>
+        @csrf
+          <button type= "submit" class="btn btn-danger">Delete</button>
           </form>
-        </td> --}}
+        </td>
       </tr>
       @endforeach
     </tbody>
   </table>
- 
+ <br/>
+{{ $projects->links() }}
 
 @endsection
 

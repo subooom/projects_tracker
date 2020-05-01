@@ -50,7 +50,7 @@
         <div class="row">    
           <div class="col-xs-12 col-md-12 col-sm-12" text="center" style="left:125px">  
               <div class="form-group">
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">SUBMIT</button>
            </div>
       </div>
   </div>

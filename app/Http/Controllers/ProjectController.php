@@ -14,8 +14,10 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects=\App\Project::all();
-        return view('pages.projects.index',compact('projects'));
+        
+        $projects=Project::latest()->paginate(5);
+        return view('pages.projects.index',compact('projects'))
+        ->with('i',(request()->input('page',1)-1)*5); 
     }
     /**
      * Show the form for creating a new resource.
@@ -52,7 +54,7 @@ class ProjectController extends Controller
         $project->title=$request->input('title');
         $project->description=$request->input('description');
         $project->save();
-       return redirect('pages.projects.index')->with('success', 'Information has been added');
+       return redirect('/')->with('success', 'Information has been added');
     }
 
 
@@ -62,21 +64,22 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show(Project $project)
+    { 
+        
+        return view('pages/projects/show',compact('projects'));
+        
+        
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        $project = \App\Project::find($id);
-        return view('pages.projects.edit',compact('project','id'));
+        return view('pages.projects.edit',compact('projects')); 
     }
 
     /**
@@ -86,13 +89,17 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
-        $project= \App\Project::find($id);
-        $project->title=$request->get('title');
-        $project->description=$request->get('description');
-        $project->save();
-           return redirect('pages.projects.create');
+        
+        $request->validate([
+            'title'=> 'required',
+            'description'=>'required',
+        ]);
+
+        Project::update($request->all());
+    return redirect("/")->with('success','project updated successfully');
+
   
     }
 
@@ -105,7 +112,7 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect('pages.projects.index')->with('success',"projects deleted successfully.");
+        return redirect('/')->with('success',"projects deleted successfully.");
     }
 }
 ?>
