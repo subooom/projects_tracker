@@ -20,10 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','ProjectController@index');
 Route::get('/about','PagesController@about');
 Route::get('/create','ProjectController@create');
- 
+
 Route::post('/store','ProjectController@store');
 Route::get('/edit','ProjectController@edit');
-Route::get('/show','ProjectController@show');
+Route::get('/show/{id}','ProjectController@show');
 Route::post('/delete/{id}','ProjectController@destroy');
 Route::get('/task','taskController@task');
 
