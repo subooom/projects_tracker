@@ -25,7 +25,10 @@
 
     <div class="container-fluid">
    
-    </div   @yield('content')>
+        @yield('content')
+
+    </div>
+    
 
     @yield('scripts')
 </body>

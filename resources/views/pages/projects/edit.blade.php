@@ -30,6 +30,7 @@
 
 <form action={{url('update'), '$project->project_id' }}method="POST">
     @csrf
+    <div class="container">
     <div class="row">
         <div class=" col-md-6 ">
         <div class="form-group ">
@@ -53,6 +54,7 @@
           <button type="submit" class="btn btn-success">UPDATE</button>
          </div>
     </div>
+</div>
 </div>
 </form>
 </div>

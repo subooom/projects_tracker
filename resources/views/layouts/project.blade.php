@@ -32,6 +32,14 @@ yo naya layout file ho eslai edit gar, side bar rakh, navbar ko satta, side bar 
   <a href="#"><i class="fas fa-cogs"></i><span>Settings</span></a>
   </div>
  
+  <div class="container-fluid">
+   
+    @yield('content')
+
+</div>
+
+
+@yield('scripts')
 
 </body>
 </html>
