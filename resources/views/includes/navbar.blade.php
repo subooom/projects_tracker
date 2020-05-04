@@ -11,11 +11,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="create"><span class="icon-cup"></span> Create</a></a>
+        <a class="nav-link" href="/create-project"><span class="icon-cup"></span> Create</a></a>
       </li>
 
       <li class="nav-item">
-      <a class="nav-link" href="about">About</a>
+      <a class="nav-link" href="/about">About</a>
     </li>
 
     </ul>
