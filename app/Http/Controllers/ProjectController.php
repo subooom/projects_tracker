@@ -14,17 +14,17 @@ class ProjectController extends Controller
 
     public function index()
     {
-        
+
         $projects=Project::latest()->paginate(5);
         return view('pages.projects.index',compact('projects'))
-        ->with('i',(request()->input('page',1)-1)*5); 
+        ->with('i',(request()->input('page',1)-1)*5);
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-  
+
     // public function project()
     // {
     //     return view('pages.project');
@@ -44,12 +44,12 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $request->validate([
             'title'=> 'required',
             'description'=>'required',
         ]);
-          
+
         $project= new \App\project;
         $project->title=$request->input('title');
         $project->description=$request->input('description');
@@ -64,12 +64,13 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
-    { 
-        
-        return view('pages/projects/show',compact('projects'));
-        
-        
+    public function show($id)
+    {
+        $project = Project::find($id);
+
+        return view('pages/projects/show', compact('project'));
+
+
     }
     /**
      * Show the form for editing the specified resource.
@@ -79,7 +80,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('pages.projects.edit',compact('projects')); 
+        return view('pages.projects.edit',compact('projects'));
     }
 
     /**
@@ -91,7 +92,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        
+
         $request->validate([
             'title'=> 'required',
             'description'=>'required',
@@ -100,7 +101,7 @@ class ProjectController extends Controller
         Project::update($request->all());
     return redirect("/")->with('success','project updated successfully');
 
-  
+
     }
 
     /**
