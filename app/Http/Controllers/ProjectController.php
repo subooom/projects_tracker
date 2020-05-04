@@ -51,10 +51,17 @@ class ProjectController extends Controller
         ]);
 
         $project= new \App\project;
-        $project->title=$request->input('title');
-        $project->description=$request->input('description');
+
+        $project->slug = str_slug($request->input('title'));
+
+        $project->title = $request->input('title');
+
+        $project->description = $request->input('description');
+
         $project->save();
-       return redirect('/')->with('success', 'Information has been added');
+
+        return redirect('/')
+          ->with('success', 'Information has been added');
     }
 
 
@@ -64,9 +71,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $project = Project::find($id);
+        $project =Project::query()
+                  ->where('slug', '=', "%{$slug}%")
+                  ->get();
 
         return view('pages/projects/show', compact('project'));
 
