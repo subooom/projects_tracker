@@ -25,4 +25,6 @@ Route::get('/edit','ProjectController@edit');
 Route::get('/show/{id}','ProjectController@show');
 Route::post('/delete/{id}','ProjectController@destroy');
 Route::get('/task','taskController@task');
+?>
+
 

@@ -28,7 +28,7 @@
             <th>Description</th>
             <th>Created On</th>
             <th>Last Edited On</th>
-            <th colspan="2">Action</th>
+            {{-- <th colspan="2">Action</th> --}}
         </tr>
     </thead>
     <tbody>
@@ -39,30 +39,42 @@
             <td data-id="{{$project->project_id}}">{{$project->description}}</td>
             <td data-id="{{$project->project_id}}">{{$project->created_at->format('d M Y')}}</td>
             <td data-id="{{$project->project_id}}">{{$project->updated_at->format('d M Y')}}</td>
-            <td class="project-item-actions" data-id="{{$project->project_id}}">
+            {{-- <td class="project-item-actions" data-id="{{$project->project_id}}">
                 <a style="margin-right: 5px" href="{{action('ProjectController@edit', $project['project_id'])}}"
                   class="btn btn-warning">Edit</a>
                   <a style="margin-right: 5px" href="{{action('ProjectController@show', $project['project_id'])}}"
                   class="btn btn-warning">Show</a>
+                  
                 <form action="{{action('ProjectController@destroy', $project['project_id'])}}" method="post">
+                  
 
 
                     @csrf
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
-            </td>
+            </td> --}}
         </tr>
         @endforeach
     </tbody>
 </table>
 <br />
-
 {{ $projects->links() }}
 
 @endsection
 
 @section('scripts')
-  <script>
-    document.querySelectorAll('.project-item').forEach( elem => elem.addEventListener('click', e => window.location.replace("/show/"+e.target.dataset.id)))
+<script>
+    // document.querySelectorAll('.project-item').forEach( elem => elem.addEventListener('click', e => window.location.replace("/show/"+e.target.dataset.id))) --}}
+    // document.querySelectorAll('.project-item').forEach(function(elem){
+       
+    //     elem.addEventListener('click',function(e){
+    //        window.location.replace("/show/"+e.target.dataset.id)
+    //     })
+    // })
+
+    document.querySelectorAll('.project-item').forEach( elem => elem.addEventListener('click' ,e => window.location.replace("/show/"+e.target.dataset.id)))
+
+
+
   </script>
 @stop

@@ -24,11 +24,13 @@
     @include('includes.navbar')
 
     <div class="container-fluid">
-   
         @yield('content')
+
 
     </div>
     
+
+
 
     @yield('scripts')
 </body>
