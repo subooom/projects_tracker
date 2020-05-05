@@ -4,91 +4,73 @@ This is an soon to be open-sourced projects tracker, manager application, which 
 
 ## Getting Started
 
-To contribute, you can do:
-1. `git clone https://github.com/subooom/projects_tracker.git'
-2. `composer install to install the dependencies.
-3. ``
-
-
-*** The section below is yet to be done ***
-
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software and how to install them.
 
 ```
-Give examples
+1. PHP 7.2.5
+2. MySQL
+3. Composer
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Clone the repository.
 
 ```
-Give the example
+git clone https://github.com/subooom/projects_tracker.git
 ```
 
-And repeat
+Install dependencies
 
 ```
-until finished
+composer install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+ Make a `.env` file from the `.env.example` and generate application key.
 
 ```
-Give an example
+php artisan key:generate
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Migrate all tables.
 
 ```
-Give an example
+php artisan migrate
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+
+To deploy the the server, do the following.
+
+```
+php artisan serve
+```
+
+After that the application will be hosted on [https://localhost:8000](https://localhost:8000)
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Laravel](https://laravel.com/docs/7.x) - The web framework used
+* [Composer](https://getcomposer.org/) - Dependency Management
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Sushma Chaudhary** - *Initial work* - [ProjectsTracker](https://github.com/subooom/projects_tracker)
+* **Subham Kharel** - *Initial work* - [ProjectsTracker](https://github.com/subooom/projects_tracker)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+See also the list of [contributors](https://github.com/subooom/projects_tracker/contributors) who participated in this project.
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to all the developers behind Laravel for making this project possible.
+* The inspiration behind this project is the experiences with Tech companies and individuals alike who are having a hard time managing or committing to a project.
