@@ -11,7 +11,7 @@ What things you need to install the software and how to install them.
 
 ```
 1. PHP 7.2.5
-2. MySQL
+2. MySQL hello
 3. Composer
 ```
 
