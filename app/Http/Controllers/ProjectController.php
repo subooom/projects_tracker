@@ -25,16 +25,15 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // public function project()
-    // {
-    //     return view('pages.project');
-    // }
+  
 
     public function create()
     {
         return view('pages.projects.create');
 
     }
+
+    
 
     /**
      * Store a newly created resource in storage.

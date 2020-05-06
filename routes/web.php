@@ -24,7 +24,9 @@ Route::post('/store','ProjectController@store');
 Route::get('/edit','ProjectController@edit');
 Route::get('/{slug}','ProjectController@show');
 Route::post('/delete/{id}','ProjectController@destroy');
-Route::get('/task','taskController@task');
+Route::get('/task','taskController@index');
+
+
 ?>
 
 

@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-lg-12 projects-header">
         <h5>PROJECTS</h5>
-        <a class="btn btn-success" href="/create">Create New Project</a>
+        <a class="btn btn-success" href="/create-project">Create New Project</a>
     </div>
 </div>
 

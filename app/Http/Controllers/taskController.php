@@ -16,10 +16,10 @@ class taskController extends Controller
         //
     }
 
-    public function task()
-    {
-        return view('pages.task');
-    }
+    // public function task()
+    // {
+    //     return view('pages.tasks.task');
+    // }
 
     /**
      * Show the form for creating a new resource.

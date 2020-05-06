@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <title>Document</title>
-
+  <title>Project</title>
   <link rel="stylesheet" href="/css/layouts/project.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="/css/all.css">
+  {{-- <link rel="stylesheet" href="/css/all.css"> --}}
+  
 @yield('css')
 </head>
 <body>
@@ -26,6 +23,7 @@ yo naya layout file ho eslai edit gar, side bar rakh, navbar ko satta, side bar 
 
 <div class="container-fluid">
     @yield('content')
+</div>
 
 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
