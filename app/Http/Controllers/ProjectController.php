@@ -61,25 +61,8 @@ class ProjectController extends Controller
 
         return redirect('/')
           ->with('success', 'Information has been added');
-    }
-
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($slug)
-    {
-        $project =Project::query()
-                  ->where('slug', '=', "%{$slug}%")
-                  ->get();
-
-        return view('pages/projects/show', compact('project'));
-
-
-    }
+        }
+  
     /**
      * Show the form for editing the specified resource.
      *

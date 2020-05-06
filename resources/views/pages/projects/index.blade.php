@@ -68,7 +68,7 @@
 <script>
     document.querySelectorAll('.project-item').forEach( elem => elem.addEventListener('click', e => {
         console.log(e.target.dataset)
-        return window.location.replace("/"+e.target.dataset.slug)
+        return window.location.replace("/"+e.target.dataset.slug + '/details')
       })
     )
     // document.querySelectorAll('.project-item').forEach(function(elem){
