@@ -7,17 +7,6 @@
             <h4>Show Project</h4>
         </div>
         <p>
-          What is needed here is, h1 ma remaining days counter counter hunu paryo, (hint: timeframe calnedar, aaja ko vanda agadi ko date not selectable, created_at)
-          
-          google term 'substract date from date php stackoverflow'
-
-          project Git url 
-
-          migration: add_git_url_to_projects_table, add_timeframe_to_projects_table, research on what more can be added to projects table and make the required migrations one by one.
-
-          Create project page ma update garne naya input feilds haru, ani create garda sab kura add hunu paryo
-
-          localhost:8000 ma last updated on udaidey ani time grame ra git url hal git url ma click garda khulne type ko bana
 
         </p>
         <div class="pull-right">

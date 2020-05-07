@@ -8,7 +8,9 @@ class project extends Model
 {
       protected $fillable = [
                 "title",
-                "description"
+                "description",
+                "git_url",
+                "time"
             ];
             
     protected $primaryKey = 'project_id';

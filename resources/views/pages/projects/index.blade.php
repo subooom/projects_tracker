@@ -26,7 +26,9 @@
             <th>Project_ID</th>
             <th>Title</th>
             <th>Description</th>
-            <th>Created On</th>
+            <th>Git_Url</th>
+            <th>Timeframe</th>
+            <th>Created_at</th>
             <th>Last Edited On</th>
             <th>Slug</th>
             {{-- <th colspan="2">Action</th> --}}
@@ -37,7 +39,9 @@
         <tr class="project-item" data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">
             <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{ $project->project_id}}</td>
             <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->title}}</td>
-            <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->description}}</td>
+            <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->description}}</td> 
+            <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->git_url}}</td>
+            <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->timeframe}}</td>
             <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->created_at->format('d M Y')}}</td>
             <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->updated_at->format('d M Y')}}</td>
             <td data-id="{{$project->project_id}}" data-slug="{{$project->slug}}">{{$project->slug}}</td>

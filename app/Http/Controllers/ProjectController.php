@@ -56,6 +56,10 @@ class ProjectController extends Controller
         $project->title = $request->input('title');
 
         $project->description = $request->input('description');
+        
+        $project->git_url = $request->input('git_url');
+        
+        $project->timeframe = $request->input('timeframe');
 
         $project->save();
 

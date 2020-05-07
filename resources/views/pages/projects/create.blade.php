@@ -47,13 +47,28 @@
             </div>
           </div>
         </div>
+        <div class="row">  
+          <div class="col-xs-12 col-md-12 col-sm-12">
+            <div class="form-group">
+              <strong>Git_Url:</strong>
+              <input type="url" class="form-control" name="git_url" placeholder="URL">
+            </div>
+          </div>
         </div>
         <div class="row">    
-          <div class="col-xs-12 col-md-12 col-sm-12" text="center" style="left:125px">  
+          <div class="col-xs-12 col-md-12 col-sm-12">  
               <div class="form-group">
-            <button type="submit" class="btn btn-success">SUBMIT</button>
-           </div>
-      </div>
+                <strong>Timeframe:</strong>
+             <input type="time" class="form-control" name="timeframe" placeholder="Timeframe">
+         </div>
+    </div>
+ </div>
+  <div class="row">    
+    <div class="col-xs-12 col-md-12 col-sm-12" text="center" style="left:125px">  
+        <div class="form-group">
+      <button type="submit" class="btn btn-success">SUBMIT</button>
+     </div>
+    </div>
   </div>
 </div>
 </form>
