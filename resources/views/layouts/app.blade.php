@@ -15,8 +15,6 @@
 
     <link rel="stylesheet" href="/css/bootstrap-undoer.css">
 
-    <link rel="stylesheet" href="/css/all.css">
-
     @yield('css')
 
 </head>
@@ -27,12 +25,7 @@
 
     <div class="container-fluid">
         @yield('content')
-
-
-    </div>
-
-
-
+    </div > 
 
     @yield('scripts')
 </body>
