@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css");
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Baloo 2', cursive;
 }
 
 .sidebar {
@@ -15,6 +16,8 @@
     transition: all 0.5s ease;
 }
 
+
+
 .sidebar a {
     display: block;
     color: white;
@@ -22,6 +25,7 @@
     height: 65px;
     width: 100%;
     padding-left: 30px;
+    text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-top: 1px solid black;
     border-left: 5px solid transparent;
@@ -44,7 +48,7 @@ a:hover,
 a.active {
     border-left: 5px solid #d6c90c;
     transition: all 0.5s ease;
-    color: #d6c90c;
+    color: #d6c90c !important;
 }
 
 .sidebar a i {
@@ -59,7 +63,6 @@ a.active {
 
 .sidebar span {
     font-size: 10px;
-    font-family: "Open Sans", sans-serif;
 }
 
 #check {
