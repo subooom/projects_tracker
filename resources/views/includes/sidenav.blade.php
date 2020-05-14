@@ -1,20 +1,23 @@
-<input type="checkbox" id="check">
-<label for="check">
-  <i class="fas fa-bars" id="btn"></i>
 
-  <i class="fas fa-times" id="cancel"></i>
-</label>
+<div class="side-nav-container">
+  <div class="side-nav">
+    <div class="logo-panel">
+      <img class="logo" src="/logo/logo_icon.png" />
+      <h2 class="project-title">Projects Tracker</h2>
 
-<div class="sidebar">
-  <header> PROJECT</header>
-  <a class="active" href="/{{$slug}}/details"><i class="fas fa-info-circle"></i><span>Details</span></a>
+    </div>
 
-  <a href="/progress"><i class="fas fa-chart-line"></i><span>Progress</span></a>
+    <div class="nav-links">
+      <a class="active" href="/{{$slug}}/details"><i class="fa fa-info-circle"></i><span>Details</span></a>
 
-  <a href="/erd"><i class="fas fa-project-diagram"></i><span>ERD</span></a>
+      <a href="/progress"><i class="fa fa-chart-line"></i><span>Progress</span></a>
+
+      <a href="/erd"><i class="fa fa-project-diagram"></i><span>ERD</span></a>
 
 
-  <a href="/task"><i class="fas fa-tasks"></i><span>Tasks</span></a>
+      <a href="/task"><i class="fa fa-tasks"></i><span>Tasks</span></a>
 
-  <a href="/settings"><i class="fas fa-cogs"></i><span>Settings</span></a>
+      <a href="/settings"><i class="fa fa-cogs"></i><span>Settings</span></a>
+    </div>
+  </div>
 </div>

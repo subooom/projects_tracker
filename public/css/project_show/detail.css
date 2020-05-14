@@ -1,0 +1,7 @@
+.main-content{
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 100vh;
+  z-index: 1;
+}
