@@ -4,6 +4,10 @@
  <link rel="stylesheet" href="/css/details/details.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css.css">
  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ {{-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> --}}
      <div class="container" style="margin-top:20px">
       <div class="row" style="margin-top: 40px">
        <div class="col">
@@ -14,10 +18,28 @@
     </div>
     <div class="col">
       <div class="date">
-      <input type="date" placeholder=" date" class="datepicker" min="2020-01-01" max="2020-12-31">
+      <input type="date"  class="datepicker"   min="2020-01-01" max="2020-12-31">
     </div>
+    </div> 
+    <div class="col1" style="float:right">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/img/avatar.png" class="user"></p>
+      <br>
+      <button class="add">+ Add Funds</button>
+      <p class="budget" style="margin-top: 18px">Budgets <span></span> December <i class="fas fa-angle-down"></i></p>
+      <div class="box1" style="margin-top:30px">
+          <p style="color:#62e7a7"><i class="fas fa-map"></i>  Travel<span></span>  $140</p>
+      </div>
+      <div class="box2" style="margin-top:24px">
+        <p style="color:#d27fe7"><i class="fas fa-bus"></i> Transport <span></span>$240</p>
     </div>
- </div>
+    <div class="box3" style="margin-top:24px">
+      <p style="color: darkblue"><i class="fas fa-shopping-basket"></i> Grocery<span></span>$140</p>
+  </div>
+  <div class="newbudget" style="margin-top:24px">
+    <p style="color: darkblue">+ Add new card</p>
+</div>
+    </div>
+    </div> 
 <br/>
 <br/>
  <div class="row" style="margin-top: 20px">
@@ -25,8 +47,7 @@
   <div class="column2">
     <div class="card">
       <h2>Wallet Balance</h2>
-      <p>32,549.00<sup> $ </sup></p>
-     
+      <p>32,549.00<sup> $ </sup></p> 
     </div>
   </div>
 
@@ -71,6 +92,5 @@
 
 @endsection
 @section('scripts')
-<script>
-// alert('show')
-</script>
+<script></script>
+
