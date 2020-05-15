@@ -1,10 +1,10 @@
  @extends('layouts.project')
-
  @section('css')
  <link rel="stylesheet" href="/css/details/details.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css.css">
  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.min.css" integrity="sha256-FdatTf20PQr/rWg+cAKfl6j4/IY3oohFAJ7gVC3M34E=" crossorigin="anonymous" />
  @endsection
 
  @section('content')
@@ -73,25 +73,32 @@
          <div class="col-6" style="padding: 0">
             <h3>Expenses Breakdown</h3>
             <div class="expensesitems">
-                <p class="items" style="margin-top:20px"><i class="fas fa-store"></i> &nbsp; Prime super shop <span
-                        style="color:aquamarine"> $140 </span></p>
+                <div class="items" style="margin-top:20px"><i class="fas fa-store" style="background-color: bisque"></i> &nbsp; Prime super shop <span
+                        style="color:rgb(32, 240, 167)"> $140 </span></p>
                 <p> Grocery</p>
-
-                <p class="items" style="margin-top:30px"> <i class="fas fa-store"></i> &nbsp; Prime super shop<span
-                        style="color:lightpink"> $140 </span></p>
+                </div>
+                <div class="items" style="margin-top:30px">
+                    <i class=" fas fa-store"></i> &nbsp; Prime super shop
+                    <span style="color:lightpink"> $140 </span></p>
                 <p>Mobile</p>
+                </div>
 
-                <p class="items" style="margin-top:30px"><i class="fas fa-store"></i> &nbsp; Prime super shop<span
-                        style="color:lightpink"> $140 </span></p>
+                <div class="items" style="margin-top:30px">
+                    <i class="fas fa-store"></i> &nbsp; Prime super shop
+                    <span style="color:lightpink"> $140 </span></p>
                 <p>Grocery</p>
+                </div>
+                <div class="items" style="margin-top:30px">
+                    <i class="fas fa-store-slash"></i> &nbsp; Prime super shop
+                    <span style="color:lightpink"> $140 </span></p>
+                <p>Grocery</p>
+                </div>
 
-                <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
-                    shop<span style="color:lightpink"> $140 </span></p>
+                <div class="items" style="margin-top:30px">
+                    <i class="fas fa-store-slash"></i> &nbsp; Prime super shop
+                    <span style="color:aquamarine"> $140 </span></p>
                 <p>Grocery</p>
-
-                <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
-                    shop<span style="color:aquamarine"> $140 </span></p>
-                <p>Grocery</p>
+                </div>
             </div>
          </div>
      </div>
@@ -101,10 +108,16 @@
  @endsection
 
  @section('scripts')
- <script></script>
+ <script>
+      $("#single").select2({
+          placeholder: "Select a programming language",
+          allowClear: true
+      });
+     
+ </script>
  {{-- p5js.js  --}}
-
  <script src="/dependencies/p5/p5.min.js"></script>
  <script src="/js/project_show/details-chart.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
  {{-- #chart-p5 --}}
  @endsection
