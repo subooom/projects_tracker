@@ -145,8 +145,7 @@ function draw() {
 
     }
   }
-
-  for (var i = 150; i <1000; i++) {
+  for (var i = 0; i <500; i++) {
     if (ordered[i]) {
       stroke(i % 360, 100, 100, .1);
       strokeWeight(r*i/10 * 0.5);
@@ -154,9 +153,6 @@ function draw() {
     }
   }
   image(logo, width/2, height/2)
-  textSize(12)
-  fill(255)
-  textFont('Montserrat, sans-serif')
 
   // for (var i = 0; i < active.length; i++) {
   //   stroke(255, 0, 255);
