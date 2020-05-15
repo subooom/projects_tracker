@@ -160,13 +160,6 @@ Strong {
     color: rgb(4, 4, 53);
 }
 
-.expenses {
-    margin-left: 48px;
-    float: left;
-    width: 515px;
-    height: 300px;
-}
-
 h1 {
     font-size: 17px;
     padding-right: 125px;
@@ -180,10 +173,7 @@ h1 {
 }
 
 .expensesitems {
-  float: left;
   overflow-y: auto;
-  width: 255px;
-  height: 300px;
 }
 
 h3 {

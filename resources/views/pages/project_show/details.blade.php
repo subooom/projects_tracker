@@ -65,34 +65,34 @@
          </div>
      </div>
      <div class="row" style="margin-top: 15px;display: flex;justify-content: space-around;margin-bottom: 50px;overflow-y: hidden;">
-         <div class="col" style="padding: 0">
+         <div class="col-6" style="padding: 0">
              <h1 style="float:left">Expenses activity</h1>
              <h1 style="float: right">This Week <i class="fas fa-angle-down"></i></h1>
-             <div id="chart-p5" />
+             <div id="chart-p5"></div>
          </div>
-         <h3>Expenses Breakdown</h3>
-         <div class="col">
-             <div class="expensesitems">
-                 <p class="items" style="margin-top:20px"><i class="fas fa-store"></i> &nbsp; Prime super shop <span
-                         style="color:aquamarine"> $140 </span></p>
-                 <p> Grocery</p>
+         <div class="col-6" style="padding: 0">
+            <h3>Expenses Breakdown</h3>
+            <div class="expensesitems">
+                <p class="items" style="margin-top:20px"><i class="fas fa-store"></i> &nbsp; Prime super shop <span
+                        style="color:aquamarine"> $140 </span></p>
+                <p> Grocery</p>
 
-                 <p class="items" style="margin-top:30px"> <i class="fas fa-store"></i> &nbsp; Prime super shop<span
-                         style="color:lightpink"> $140 </span></p>
-                 <p>Mobile</p>
+                <p class="items" style="margin-top:30px"> <i class="fas fa-store"></i> &nbsp; Prime super shop<span
+                        style="color:lightpink"> $140 </span></p>
+                <p>Mobile</p>
 
-                 <p class="items" style="margin-top:30px"><i class="fas fa-store"></i> &nbsp; Prime super shop<span
-                         style="color:lightpink"> $140 </span></p>
-                 <p>Grocery</p>
+                <p class="items" style="margin-top:30px"><i class="fas fa-store"></i> &nbsp; Prime super shop<span
+                        style="color:lightpink"> $140 </span></p>
+                <p>Grocery</p>
 
-                 <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
-                     shop<span style="color:lightpink"> $140 </span></p>
-                 <p>Grocery</p>
+                <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
+                    shop<span style="color:lightpink"> $140 </span></p>
+                <p>Grocery</p>
 
-                 <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
-                     shop<span style="color:aquamarine"> $140 </span></p>
-                 <p>Grocery</p>
-             </div>
+                <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
+                    shop<span style="color:aquamarine"> $140 </span></p>
+                <p>Grocery</p>
+            </div>
          </div>
      </div>
      <br />
