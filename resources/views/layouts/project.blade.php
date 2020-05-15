@@ -15,6 +15,8 @@
 
   <div style="display: flex;">
 
+    @include('includes.loader')
+
     @include('includes.sidenav')
 
     <div class="main-content">
@@ -33,7 +35,12 @@
       let sidenav = document.querySelectorAll('.side-nav-container')[0];
       let logoDiv = document.querySelectorAll('.logo-panel')[0];
       let content = document.querySelectorAll('.main-content')[0];
+      let loader = document.querySelectorAll('.loader-container')[0];
 
+
+      setTimeout(_=>{
+        loader.remove()
+      }, 2000)
       content.style.zIndex = 2;
 
       updateMainDiv();

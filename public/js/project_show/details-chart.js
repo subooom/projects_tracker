@@ -36,7 +36,7 @@ let maxY = getMax(data)+(.2*getMax(data))
 let verticalOffset = 50;
 
 let h = 360;
-let w = 400;
+let we = 400;
 
 let verticalAxis = getVerticalAxis(maxY, h/verticalOffset);
 
@@ -59,7 +59,7 @@ function getMax(data){
 }
 
 function setup(){
-  let canvas = createCanvas(w,h)
+  let canvas = createCanvas(we,h)
 
   canvas.parent('chart-p5');
 }
