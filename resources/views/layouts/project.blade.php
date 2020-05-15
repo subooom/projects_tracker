@@ -34,17 +34,21 @@
       let logoDiv = document.querySelectorAll('.logo-panel')[0];
       let content = document.querySelectorAll('.main-content')[0];
 
+      content.style.zIndex = 2;
+
       updateMainDiv();
 
       function updateMainDiv(){
         content.style.width= window.innerWidth - sidenav.style.width.replace('px', '') + 'px'
       }
 
-      logoDiv.addEventListener('mouseenter', e => {
+      sidenav.addEventListener('mouseenter', e => {
         sidenav.style.width = 200+'px';
+        sidenav.style.zIndex = 3;
         updateMainDiv();
       })
       sidenav.addEventListener('mouseleave', e => {
+        sidenav.style.zIndex = 0;
         sidenav.style.width = 60+'px';
         updateMainDiv();
       })

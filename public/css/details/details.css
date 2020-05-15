@@ -1,0 +1,284 @@
+.container {
+    height: 98vh;
+    width: 100%;
+    overflow-y: scroll;
+    /* background-color: white; */
+    background-image: linear-gradient(to right, white, white 78%, #f6fffe 22%);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: -1px -1px 6px 0px rgba(92, 99, 103, 0.55);
+    float: right;
+}
+
+.col {
+    float: left;
+    /* padding-left: 15px;
+    padding-right: 130px */
+    padding-right: 107px;
+}
+
+.col1 {
+    float: right;
+}
+
+.search {
+    margin-left: 42px;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.search i {
+    position: absolute;
+    color: black;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+input {
+    height: 50px;
+    width: 350px;
+    border: none;
+    border-radius: 25px;
+    border-color: rgb(249, 249, 249);
+    background-color: rgb(249, 249, 249);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+
+.datepicker {
+    height: 50px;
+    width: 250px;
+    border: none;
+    border-radius: 25px;
+    border-color: rgb(249, 249, 249);
+    background-color: rgb(249, 249, 249);
+    text-align: center;
+}
+
+.section {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 950px;
+    margin-top: 30px;
+    margin-left: 48px;
+    border-radius: 30px;
+    background-color: #f7fffd;
+    margin-bottom: 20px;
+    padding: 24px;
+    box-sizing: border-box; */
+    background-color: #f9fffe;
+    height: 250px;
+    width: 770px;
+    margin-top: 30px;
+    margin-left: 48px;
+    border-radius: 30px;
+}
+
+.column2 {
+    margin-top: 30px;
+    float: left;
+    width: 28%;
+    padding: 0 10px;
+    margin-left: 20px;
+}
+
+.cardsection {
+    margin-top: 50px;
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+}
+
+.column4 {
+    margin-top: 50px;
+    float: left;
+    width: 29%;
+    padding: 0 10px;
+}
+
+.card {
+    height: 150px;
+    text-align: center;
+    color: #a9a9a9;
+}
+
+.card1 {
+    height: 150px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #1c083e;
+    text-align: center;
+}
+
+.card2 {
+    height: 150px;
+    border: dashed;
+    border-radius: 15px;
+    text-align: center;
+    color: lightgrey;
+    align-items: center;
+    justify-content: center;
+}
+
+.card2 p {
+    color: rgb(4, 4, 53);
+    line-height: 10;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+sup {
+    font-size: 15px;
+}
+
+.card p {
+    text-align: left;
+    font-size: 30px;
+    color: midnightblue;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: rgb(4, 4, 53);
+}
+
+Strong {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(4, 4, 53);
+}
+
+.expenses {
+    margin-left: 48px;
+    float: left;
+    width: 515px;
+    height: 300px;
+}
+
+h1 {
+    font-size: 17px;
+    padding-right: 125px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.chart-image {
+    width: 400px;
+    height: 310px;
+    background-color: white;
+}
+
+.expensesitems {
+  float: left;
+  overflow-y: auto;
+  width: 255px;
+  height: 300px;
+}
+
+h3 {
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.items {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+span {
+    font-size: 12px;
+    margin-left: 60px;
+}
+
+.user {
+  width: 230px;
+}
+
+.add {
+    height: 50px;
+    width: 200px;
+    background-color: #12c7a2;
+    border-radius: 12px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.budget {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(4, 4, 53);
+    font-size: 15px;
+}
+
+.newbudget {
+    height: 50px;
+    width: 200px;
+    border: dashed;
+    color: gainsboro;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 4;
+}
+
+.box1 {
+    height: 50px;
+    width: 200px;
+    border: none;
+    /* background-color: #bdf2d8; */
+    background-image: linear-gradient(
+        to right,
+        #bdf2d8,
+        #bdf2d8 70%,
+        #dcf7ea 30%
+    );
+    border-radius: 15px;
+    text-align: center;
+    line-height: 4;
+}
+
+.box2 {
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-image: linear-gradient(
+        to right,
+        #efd8f5,
+        #efd8f5 70%,
+        #f4e9f7 30%
+    );
+    border-radius: 15px;
+    text-align: center;
+    line-height: 4;
+}
+
+.box3 {
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-color: #dde7e7;
+    background-image: linear-gradient(
+        to right,
+        #dde7e7,
+        #dde7e7 70%,
+        #f0f5f5 30%
+    );
+    border-radius: 15px;
+    text-align: center;
+    line-height: 4;
+}
