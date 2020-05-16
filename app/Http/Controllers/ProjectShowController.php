@@ -38,4 +38,10 @@ class ProjectShowController extends Controller
         
         return view('/pages/project_show/progress');
     }
+
+    public function vision()
+    {
+        
+        return view('/pages/project_show/vision');
+    }
 }

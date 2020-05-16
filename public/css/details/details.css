@@ -46,15 +46,24 @@ input {
     cursor: pointer;
 }
 
-.datepicker {
+.picker {
     height: 50px;
     width: 250px;
     border: none;
     border-radius: 25px;
     border-color: rgb(249, 249, 249);
     background-color: rgb(249, 249, 249);
+    /* color: white; */
     text-align: center;
 }
+
+/* #picker {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+} */
 
 .section {
     /* display: flex;
@@ -69,7 +78,7 @@ input {
     margin-bottom: 20px;
     padding: 24px;
     box-sizing: border-box; */
-    background-color: hsla(170, 84%, 96%,.7);
+    background-color: hsla(170, 84%, 96%, .7);
     height: 250px;
     width: 770px;
     margin-top: 30px;
