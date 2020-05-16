@@ -20,17 +20,40 @@ class ProjectShowController extends Controller
 
     public function task($slug)
     {
-      // ! FIRST THING TODO:
+      // ! VSCODE - FIRST THINGS TODO:
 
-      // ! 1. Press 'cntrl + shift + p' and type in extensions and select 'install extensions' 💓
+      // ! 1. Press 'Cntrl + Shift + p' and type in extensions and select 'install extensions' 💓
 
       // ! 2. Search for 'Emoji' by 'perkovec' and install it. 💓💓
 
       // ! 3. Search for 'Better Comments' by 'Aaron Bond' and install it.
 
-      // !
+      // ! 4. Go to View menu and make sure the second last option 'Render Whitespace' is unchecked.
 
       //
+
+      // $ Why we're doing this: The side nav was taking me to suspicious routes when I clicked on the links
+
+      // $ What I did to investigate: I went to the sidenav.blade.php and saw:
+
+      // !
+
+      // ! <a href="/{{$slug ?? ''}}/progress"><i class="fa fa-chart-line"></i><span>Progress</span></a>
+
+      // !
+
+      // $ It meant that the `$slug` must have bee undefined and when tried to printed returns an empty string
+
+      // $ because the route i was going to was `//project`, where as it should have been `/project-1/project`,
+
+      // $ So I went to the controller and saw that the `slug` variable wasn't being passed
+
+      // in the `return` function, easy fix but I've taken some time to create a report of how it all works in Laravel
+
+      // as a review exercise for you. It's pretty straight forward! 😛 😛
+
+
+      // ?
 
       // ? We need to send the slug to the frontend because of the following, ani plus remember instead of 'id' we are
 
@@ -56,11 +79,16 @@ class ProjectShowController extends Controller
 
       // ! So we need to pass the `slug` data temporarily through the `return` statement with the with statement
 
+      // ? IDEA
+
       // ? IDEA: Although, now I'm thinking we should have started with the making the ERD for the `task` table then the view
 
       // ? IDEA: The view could define what entries we have, I'll work on the erd soon and you make the migrations based on
 
       // ? IDEA: the erd la..😍 😍
+
+      // ? IDEA
+
 
       // TODO ⚠ ↙
 
@@ -76,17 +104,22 @@ class ProjectShowController extends Controller
 
       // TODO
 
+
       // ! TEMPORARY MIND FUCK 😱 😨 😨 ⚠ ⚠
 
-      // ! TEMPORARY MIND FUCK: Send the slug to the view, remember we also got the slug from
+      // ! TEMPORARY MIND FUCK - Send the slug to the view, remember we also got the slug from
 
-      // ! the view when the <a></a> tag was clicked
+      // ! TEMPORARY MIND FUCK - the view when the <a></a> tag was clicked
+
+      // ! TEMPORARY MIND FUCK
+
 
       // ? We are doing this because the sidenav isn't working properly
 
       // * Sending good vibes your way 😍 😍 😍 😍
 
       // * Hope you fix other functions as well :P just get the slug and send the slug 😃 😁
+
 
         return view('pages/project_show/task')->with([
           'slug' => $slug
