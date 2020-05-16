@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="container" style="">
+<div class="container">
     <div class="row" style="margin-top: 40px">
         <div class="col">
             <div class="search">
@@ -233,25 +233,30 @@
         <div class="col-6" style="padding: 0">
            <h3>Expenses Breakdown</h3>
            <div class="expensesitems">
-               <p class="items" style="margin-top:20px"><i class="fas fa-store"></i> &nbsp; Prime super shop <span
+               <div class="items" style="margin-top:20px"><i class="fas fa-store"></i> &nbsp; Prime super shop <span
                        style="color:aquamarine"> $140 </span></p>
                <p> Grocery</p>
+               </div>
 
-               <p class="items" style="margin-top:30px"> <i class="fas fa-store"></i> &nbsp; Prime super shop<span
+               <div class="items" style="margin-top:30px"> <i class="fas fa-store"></i> &nbsp; Prime super shop<span
                        style="color:lightpink"> $140 </span></p>
                <p>Mobile</p>
+               </div>
 
-               <p class="items" style="margin-top:30px"><i class="fas fa-store"></i> &nbsp; Prime super shop<span
+               <div class="items" style="margin-top:30px"><i class="fas fa-store"></i> &nbsp; Prime super shop<span
                        style="color:lightpink"> $140 </span></p>
                <p>Grocery</p>
+               </div>
 
-               <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
+               <div class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
                    shop<span style="color:lightpink"> $140 </span></p>
                <p>Grocery</p>
+               </div>
 
-               <p class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
+               <div class="items" style="margin-top:30px"><i class="fas fa-store-slash"></i> &nbsp; Prime super
                    shop<span style="color:aquamarine"> $140 </span></p>
                <p>Grocery</p>
+               </div>
            </div>
         </div>
     </div>
@@ -264,8 +269,8 @@
 <script>
     $('.picker').dateDropper();
  </script>
-<script src="datedropper/2.0/datedropper.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="datedropper/2.0/datedropper.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.js"></script>
 {{-- p5js.js  --}}
 <script src="/dependencies/p5/p5.min.js"></script>

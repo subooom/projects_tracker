@@ -9,3 +9,14 @@
     box-shadow: -1px -1px 6px 0px rgba(92, 99, 103, 0.55);
     float: right;
 }
+
+.picker {
+    height: 50px;
+    width: 250px;
+    border: none;
+    border-radius: 25px;
+    border-color: rgb(249, 249, 249);
+    background-color: rgb(249, 249, 249);
+    /* color: white; */
+    text-align: center;
+}
