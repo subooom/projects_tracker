@@ -46,15 +46,24 @@ input {
     cursor: pointer;
 }
 
-.datepicker {
+.picker {
     height: 50px;
     width: 250px;
     border: none;
     border-radius: 25px;
     border-color: rgb(249, 249, 249);
     background-color: rgb(249, 249, 249);
+    /* color: white; */
     text-align: center;
 }
+
+/* #picker {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+} */
 
 .section {
     /* display: flex;
@@ -69,7 +78,7 @@ input {
     margin-bottom: 20px;
     padding: 24px;
     box-sizing: border-box; */
-    background-color: hsla(170, 84%, 96%,.7);
+    background-color: hsla(170, 84%, 96%, .7);
     height: 250px;
     width: 770px;
     margin-top: 30px;
@@ -173,12 +182,13 @@ h1 {
 }
 
 .expensesitems {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 h3 {
     font-size: 17px;
     font-family: "Montserrat", sans-serif;
+    color: rgb(4, 4, 53);
 }
 
 p {
@@ -189,6 +199,14 @@ p {
 .items {
     font-size: 15px;
     font-family: "Montserrat", sans-serif;
+    /* background-color: rosybrown; */
+}
+
+.icon {
+    background-color: rosybrown;
+    height: 20px;
+    width: 100px;
+    border-radius: 5px;
 }
 
 span {
@@ -196,8 +214,13 @@ span {
     margin-left: 60px;
 }
 
+.items i {
+    color: #031f11;
+    background-color: #efd8f5;
+}
+
 .user {
-  width: 230px;
+    width: 230px;
 }
 
 .add {
@@ -231,12 +254,10 @@ span {
     width: 200px;
     border: none;
     /* background-color: #bdf2d8; */
-    background-image: linear-gradient(
-        to right,
-        #bdf2d8,
-        #bdf2d8 70%,
-        #dcf7ea 30%
-    );
+    background-image: linear-gradient(to right,
+            #bdf2d8,
+            #bdf2d8 70%,
+            #dcf7ea 30%);
     border-radius: 15px;
     text-align: center;
     line-height: 4;
@@ -246,12 +267,10 @@ span {
     height: 50px;
     width: 200px;
     border: none;
-    background-image: linear-gradient(
-        to right,
-        #efd8f5,
-        #efd8f5 70%,
-        #f4e9f7 30%
-    );
+    background-image: linear-gradient(to right,
+            #efd8f5,
+            #efd8f5 70%,
+            #f4e9f7 30%);
     border-radius: 15px;
     text-align: center;
     line-height: 4;
@@ -262,12 +281,10 @@ span {
     width: 200px;
     border: none;
     background-color: #dde7e7;
-    background-image: linear-gradient(
-        to right,
-        #dde7e7,
-        #dde7e7 70%,
-        #f0f5f5 30%
-    );
+    background-image: linear-gradient(to right,
+            #dde7e7,
+            #dde7e7 70%,
+            #f0f5f5 30%);
     border-radius: 15px;
     text-align: center;
     line-height: 4;
