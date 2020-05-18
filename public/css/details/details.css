@@ -225,6 +225,7 @@ span {
 }
 
 .add {
+    display: flex;
     justify-content: center;
     margin-left: 18px;
     height: 58px;
@@ -245,7 +246,8 @@ span {
 }
 
 .budget {
-
+    display: flex;
+    justify-content: center;
     font-family: "Montserrat", sans-serif;
     color: rgb(4, 4, 53);
     font-size: 15px;
@@ -265,6 +267,8 @@ span {
     text-align: center;
     line-height: 4;
 }
+
+
 
 .newbudget:hover {
     border-color: black;
@@ -321,6 +325,19 @@ span {
     line-height: 4;
 }
 
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 .last {
     margin-top: 20px;
     display: flex;
@@ -357,4 +374,17 @@ span {
 
 .submit:hover {
     background-color: #45a049;
+}
+
+.closeBtn {
+    color: rgb(24, 22, 22);
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: rgb(167, 162, 162);
+    text-decoration: none;
+    cursor: pointer;
 }

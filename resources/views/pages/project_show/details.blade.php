@@ -20,12 +20,14 @@
                 <input class="picker" type="text">
             </div>
         </div>
-        <div class="col1" style="display: flex;flex-direction:column">
+        <div class="col1" style="display: flex;flex-direction:column; justify-content: center;align-items: center;">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/img/avatar.png" class="user"></p>
             <br>
-            <button class="add">+ Add Funds</button>
-            <p class="budget" style="margin-top: 18px">Budgets<span></span>December <i class="fas fa-angle-down"></i>
-            </p>
+            <button id="modalBtn" class="add">+ Add Funds</button>
+            <div class="budget" style="margin-top: 25px;font-size:15px">
+               <h1 class="heading"> Budgets</h1>
+                <p class="pgraph">December <i class="fas fa-angle-down"></i></p>
+            </div>
             <div class="box1" style="margin-top:25px">
                 <p style="color:#62e7a7"><i class="fas fa-map"></i> Travel<span></span> $140</p>
             </div>
@@ -242,34 +244,34 @@
             <div class="expensesitems">
                 <div class="items" style="margin-top:20px">
                 <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i> &nbsp; Prime super shop 
-                    <span style="color:aquamarine"> $140 </span></p>
+                    <span style="color:rgb(240, 130, 146)"> $140 </span></p>
                     <p> Grocery</p>
                 </div>
 
                 <div class="items" style="margin-top:25px">
                      <i class="fas fa-store" style="color:rgb(82, 197, 159)"></i> &nbsp; Prime super shop
-                     <span style="color:lightpink"> $140 </span></p>
+                     <span style="color:rgb(82, 197, 159);font-size:15px"> $140 </span></p>
                        <p>Mobile</p>
                 </div>
 
                 <div class="items" style="margin-top:25px">
                     <i class="fas fa-store" style=" color:rgb(240, 130, 146)"></i>
                      &nbsp; Prime super shop
-                     <span style="color:lightpink"> $140 </span></p>
+                     <span style="color:rgb(240, 130, 146);font-size:15px"> $140 </span></p>
                      <p>Grocery</p>
                 </div>
 
                 <div class="items" style="margin-top:25px">
                     <i class="fas fa-store" style="color:rgb(82, 197, 159)"></i>
                     &nbsp; Prime super shop
-                    <span style="color:lightpink"> $140 </span></p>
+                    <span style="color:rgb(82, 197, 159);font-size:15px"> $140 </span></p>
                       <p>Grocery</p>
                 </div>
 
                 <div class="items" style="margin-top:25px">
                     <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i> 
                     &nbsp; Prime super shop
-                    <span style="color:aquamarine"> $140 </span></p>
+                    <span style="color:rgb(240, 130, 146);font-size:15px"> $140 </span></p>
                      <p>Grocery</p>
                 </div>
             </div>
@@ -312,11 +314,5 @@
 {{-- p5js.js  --}}
 <script src="/dependencies/p5/p5.min.js"></script>
 <script src="/js/project_show/details-chart.js"></script>
-
-
-<script>
-    // $('.picker').dateDropper();
-
-</script>
 {{-- #chart-p5 --}}
 @endsection
