@@ -16,7 +16,7 @@
       <a href="/{{$slug ?? ''}}/task"><i class="fa fa-tasks"></i><span>Tasks</span></a>
 
       <a href="/{{$slug ?? ''}}/settings"><i class="fa fa-cogs"></i><span>Settings</span></a>
-      
+
       <a href="/{{$slug ?? ''}}/vision"><i class="far fa-eye"></i><span>Vision</span></a>
     </div>
   </div>
