@@ -7,15 +7,13 @@ class ProjectShowController extends Controller
 {
     public function details($slug)
     {
-        $project = Project::query()
+          $project = Project::query()
         ->where('slug', '=', $slug)
         ->get();
-
         return view('pages/project_show/details')->with([
             'project' => $project[0],
             'slug' => $slug
         ]);
-
     }
 
     public function task($slug)
@@ -105,7 +103,7 @@ class ProjectShowController extends Controller
 
       // ! TEMPORARY MIND FUCK - the view when the <a></a> tag was clicked
 
-      // ! TEMPORARY MIND FUCK
+      // ! TEMPORARY MIND FUCK 
 
 
       // ? We are doing this because the sidenav isn't working properly
@@ -135,8 +133,7 @@ class ProjectShowController extends Controller
         $project = Project::query()
         ->where('slug', '=', $slug)
         ->get();
-
-        return view('pages/project_show/erd')->with([
+         return view('pages/project_show/erd')->with([
             'project' => $project[0],
             'slug' => $slug
         ]);
@@ -147,19 +144,17 @@ class ProjectShowController extends Controller
         $project = Project::query()
         ->where('slug', '=', $slug)
         ->get();
-
         return view('pages/project_show/progress')->with([
             'project' => $project[0],
             'slug' => $slug
         ]);
     }
-
+    
     public function vision($slug)
     {
        $project = Project::query()
         ->where('slug', '=', $slug)
         ->get();
-
         return view('pages/project_show/vision')->with([
             'project' => $project[0],
             'slug' => $slug

@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
 Route::get('/','ProjectController@index');
 Route::get('/about','PagesController@about');
 Route::get('/create-project','ProjectController@create');
@@ -29,7 +28,6 @@ Route::get('/{slug}/erd','ProjectShowController@erd');
 Route::get('/{slug}/progress','ProjectShowController@progress');
 Route::get('/{slug}/settings','ProjectShowController@settings');
 Route::get('/{slug}/vision','ProjectShowController@vision');
-
 ?>
 
 
