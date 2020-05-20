@@ -2,7 +2,8 @@
 @section('css')
 <link rel="stylesheet" href="/css/settings/settings.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.css">    
 @endsection
 
 @section('content')
@@ -15,7 +16,7 @@
         <legend><span class="number">1</span> Candidate Info</legend>
         <input type="text" name="name" placeholder=" Name *">
         <input type="email" name="email" placeholder=" Email *">
-        <input type="date" name="birthday" placeholder=" Birthday *">
+        <input type="text" name="birthday" class="picker" data-large-mode="true" data-dd-theme="leaf" placeholder=" Birthday *" >
          <input type="currentpassword" name="Cupswd" placeholder="CurrendPassword *" minlength="8">
          <input type="newpassword" name="Npswd" placeholder=" NewPassword *"> 
         <input type="confirmpassword" name="pswd" placeholder=" ConfirmPassword *">
@@ -87,7 +88,13 @@
 
 @section('scripts')
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
+<script src="datedropper/2.0/datedropper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.js"></script>
+  <script>
+    $('.picker').dateDropper(
+      
+    );
 </script>
+
 
 @endsection
