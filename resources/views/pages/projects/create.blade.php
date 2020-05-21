@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-          <div class="col-lg-12 margin-tb"  style=" margin-top: 50px">
+          <div class="col-lg-12 margin-tb"  style=" margin-top: 30px">
               <div class="pull-left">
                   <h4>Add New Project</h4>
               </div>
@@ -47,14 +47,14 @@
             </div>
           </div>
         </div>
-        <div class="row">  
+        {{-- <div class="row">  
           <div class="col-xs-12 col-md-12 col-sm-12">
             <div class="form-group">
               <strong>Git_Url:</strong>
               <input type="url" class="form-control" name="git_url" placeholder="URL">
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="row">    
           <div class="col-xs-12 col-md-12 col-sm-12">  
               <div class="form-group">
@@ -63,6 +63,30 @@
          </div>
     </div>
  </div>
+ <div class="row">    
+  <div class="col-xs-12 col-md-12 col-sm-12">  
+      <div class="form-group">
+        <strong>Budget:</strong>
+     <input type="text" class="form-control" name="budget" placeholder="Budget">
+ </div>
+</div>
+</div>
+<div class="row">    
+  <div class="col-xs-12 col-md-12 col-sm-12">  
+      <div class="form-group">
+        <strong>Budget_currency:</strong>
+     <input type="text" class="form-control" name="budgetcurrency" placeholder="BudgetCurrency">
+ </div>
+</div>
+</div>
+<div class="row">    
+  <div class="col-xs-12 col-md-12 col-sm-12">  
+      <div class="form-group">
+        <strong>Status:</strong>
+     <input type="text" class="form-control" name="status" placeholder="status">
+ </div>
+</div>
+</div>
   <div class="row">    
     <div class="col-xs-12 col-md-12 col-sm-12" text="center" style="left:125px">  
         <div class="form-group">

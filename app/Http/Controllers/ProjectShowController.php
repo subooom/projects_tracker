@@ -7,26 +7,18 @@ class ProjectShowController extends Controller
 {
     public function details($slug)
     {
-        $project = Project::query()
+          $project = Project::query()
         ->where('slug', '=', $slug)
         ->get();
-
         return view('pages/project_show/details')->with([
             'project' => $project[0],
             'slug' => $slug
         ]);
-
     }
 
     public function task($slug)
     {
-      // ! VSCODE - FIRST THINGS TODO:
-
-      // ! 1. Press 'Cntrl + Shift + p' and type in extensions and select 'install extensions' 💓
-
-      // ! 2. Search for 'Emoji' by 'perkovec' and install it. 💓💓
-
-      // ! 3. Search for 'Better Comments' by 'Aaron Bond' and install it.
+    
 
       // ! 4. Go to View menu and make sure the second last option 'Render Whitespace' is unchecked.
 
@@ -111,7 +103,7 @@ class ProjectShowController extends Controller
 
       // ! TEMPORARY MIND FUCK - the view when the <a></a> tag was clicked
 
-      // ! TEMPORARY MIND FUCK
+      // ! TEMPORARY MIND FUCK 
 
 
       // ? We are doing this because the sidenav isn't working properly
@@ -126,25 +118,46 @@ class ProjectShowController extends Controller
         ]);
     }
 
-    public function settings()
+    public function settings($slug)
     {
-        return view('/pages/project_show/settings');
+        $project = Project::query()
+        ->where('slug', '=', $slug)
+        ->get();
+        return view('pages/project_show/settings')->with([
+            'slug' => $slug
+        ]);
     }
 
-    public function erd()
+    public function erd($slug)
     {
-        return view('/pages/project_show/erd');
+        $project = Project::query()
+        ->where('slug', '=', $slug)
+        ->get();
+         return view('pages/project_show/erd')->with([
+            'project' => $project[0],
+            'slug' => $slug
+        ]);
     }
 
-    public function progress()
+    public function progress($slug)
     {
-
-        return view('/pages/project_show/progress');
+        $project = Project::query()
+        ->where('slug', '=', $slug)
+        ->get();
+        return view('pages/project_show/progress')->with([
+            'project' => $project[0],
+            'slug' => $slug
+        ]);
     }
-
-    public function vision()
+    
+    public function vision($slug)
     {
-
-        return view('/pages/project_show/vision');
+       $project = Project::query()
+        ->where('slug', '=', $slug)
+        ->get();
+        return view('pages/project_show/vision')->with([
+            'project' => $project[0],
+            'slug' => $slug
+        ]);
     }
 }

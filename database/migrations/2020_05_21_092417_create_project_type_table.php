@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectTasksTable extends Migration
+class CreateProjectTypeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateProjectTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_tasks', function (Blueprint $table) {
-            $table->id(); 
-            $table->integer('project_id');
-            $table->integer('task_id');
+        Schema::create('project_type', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->text('description');
+            $table->string('slug');
             $table->timestamps();
+            $table->integer('created_by');
+            $table->boolean('enabled');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateProjectTasksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project_tasks');
+        Schema::dropIfExists('project_type');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddTimeframeToProjectsTable extends Migration
+class CreateTeamRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddTimeframeToProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->time('timeframe');
+        Schema::create('team_roles', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->text('description');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddTimeframeToProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->dropColumn('timeframe');
-        });
+        Schema::dropIfExists('team_roles');
     }
 }

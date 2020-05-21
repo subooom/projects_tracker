@@ -26,10 +26,13 @@
             <th>Project_ID</th>
             <th>Title</th>
             <th>Description</th>
-            <th>Git_Url</th>
+            {{-- <th>Git_Url</th> --}}
             <th>Timeframe</th>
             <th>Created_at</th>
             <th>Last Edited On</th>
+            <th>Budget</th>
+            <th>Budget_currency</th>
+            <th>Status</th>
             <th>Slug</th>
             {{-- <th colspan="2">Action</th> --}}
         </tr>
