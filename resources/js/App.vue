@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="page-body">
-    <TheNavbar></TheNavbar>
+    <!-- <LoadingScreen></LoadingScreen> -->
+    <TheNavbar @onSignUpClick="signUpClicked" :show="showNavbar"></TheNavbar>
     <router-view></router-view>
 
   </div>
@@ -9,11 +10,23 @@
 <script>
 
 import TheNavbar from './views/components/TheNavbar.vue'
+import LoadingScreen from './views/components/LoadingScreen.vue'
 
 export default {
   name: 'app',
   components: {
-    TheNavbar
+    TheNavbar,
+    LoadingScreen
+  },
+  data: function () {
+    return {
+      showNavbar: true
+    }
+  },
+  methods : {
+    signUpClicked(){
+      this.showNavbar = false;
+    }
   }
 }
 </script>
