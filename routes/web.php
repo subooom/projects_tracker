@@ -17,7 +17,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/','ProjectController@index');
+Route::get('/', function(){
+  return view('vue');
+});
+
+
+
+// We will modify the following routes bistari, ahile chai /old-app ma gais bhaney puranai app aaucha
+Route::get('/old-app','ProjectController@index');
 Route::get('/about','PagesController@about');
 Route::get('/create-project','ProjectController@create');
 Route::post('/store','ProjectController@store');
@@ -25,7 +32,7 @@ Route::get('/edit','ProjectController@edit');
 
 Route::post('/delete/{id}','ProjectController@destroy');
 
-Route::get('/{slug}/details','ProjectShowController@details');   
+Route::get('/{slug}/details','ProjectShowController@details');
 Route::get('/{slug}/task','ProjectShowController@task');
 Route::get('/{slug}/erd','ProjectShowController@erd');
 Route::get('/{slug}/progress','ProjectShowController@progress');
