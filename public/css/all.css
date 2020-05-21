@@ -2,6 +2,8 @@
 
 *{
   font-family: 'Baloo 2', cursive;
+  margin:0;
+  padding: 0;
 }
 body{
   overflow-x: hidden;
