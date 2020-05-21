@@ -4,5 +4,5 @@
   font-family: 'Baloo 2', cursive;
 }
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }

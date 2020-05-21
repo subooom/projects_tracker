@@ -21,7 +21,6 @@ Route::get('/', function(){
 
 // We will modify the following routes bistari, ahile chai /old-app ma gais bhaney puranai app aaucha
 Route::get('/old-app','ProjectController@index');
-Route::get('/','ProjectController@index');
 Route::get('/about','PagesController@about');
 Route::get('/create-project','ProjectController@create');
 Route::post('/store','ProjectController@store');
@@ -33,8 +32,6 @@ Route::get('/{slug}/task','ProjectShowController@task');
 Route::get('/{slug}/erd','ProjectShowController@erd');
 Route::get('/{slug}/progress','ProjectShowController@progress');
 Route::get('/{slug}/settings','ProjectShowController@settings');
-Route::get('/{slug}/vision','ProjectShowController@vision');
-
 ?>
 
 
