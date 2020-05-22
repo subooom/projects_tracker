@@ -5,26 +5,49 @@
         <div class="main-container">
           <h4 class="logo">paradiseinself</h4>
           <div class="promo-text">
-            <h4>ONE</h4>
+            <h4>1</h4>
             <h4>DAY</h4>
             <h4>AT A</h4>
             <h3>TIME.</h3>
-            <div class="button-container">
+          </div>
+          <div class="slider">
+            <div class="slides">
+              <div class="button-container">
+                <button class="custom-button">
+                  <font-awesome-icon :icon="['fas', 'envelope']" />
+                  <span>Email</span>
+                </button>
 
-              <button>
-                <font-awesome-icon :icon="['fas', 'envelope']" />
-                <span>Email</span>
-              </button>
+                <GoogleLogin class="google-login-button custom-button" :params="params" :onSuccess="onGoogleLoginSuccess" :onFailure="onGoogleLoginFailure">
+                  <font-awesome-icon :icon="['fab', 'google']" />
+                  <span>Google</span>
+                </GoogleLogin>
 
-              <GoogleLogin class="google-login-button" :params="params" :onSuccess="onGoogleLoginSuccess" :onFailure="onGoogleLoginFailure">
-                <font-awesome-icon :icon="['fab', 'google']" />
-                <span>Google</span>
-              </GoogleLogin>
-
-              <button>
-                <font-awesome-icon :icon="['fab', 'facebook']" />
-                <span>Facebook</span>
-              </button>
+                <button class="custom-button">
+                  <font-awesome-icon :icon="['fab', 'facebook']" />
+                  <span>Facebook</span>
+                </button>
+                <p class="sign-in-text">Already a member? <router-link to="{name:'login}">Sign in!</router-link></p>
+              </div>
+              <form class="username-form">
+                <div class="input-group mb-3">
+                  <span class="input-icon">
+                    <font-awesome-icon :icon="['fas', 'envelope']" />
+                  </span>
+                  <input style="border:none" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username input">
+                </div>
+                <div class="input-group mb-3">
+                  <img src="newUser.SK" />
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="avatar">
+                    <label class="custom-file-label" for="avatar">Choose Avatar</label>
+                  </div>
+                </div>
+                <button class="custom-button">
+                  <font-awesome-icon :icon="['fas', 'save']" />
+                  <span>Save</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -34,11 +57,15 @@
 
 <script>
   import GoogleLogin from 'vue-google-login';
+  import axios from 'axios';
 
     export default {
       name: 'SignUp',
       components: {
         GoogleLogin
+      },
+      mounted(){
+        axios.get('/api/fetchAllUsers').then( (err, resp) => console.log(resp))
       },
       data() {
             return {
@@ -49,14 +76,16 @@
                     width: 250,
                     height: 50,
                     longtitle: true
-                }
+                },
+                newUser: {}
             }
       },
       methods: {
         onGoogleLoginSuccess(googleUser) {
-          console.log(googleUser);
+          let slides = document.querySelector('.slides')
+          slides.style.left = -(slides.children[0].clientWidth+4)+'px'
 
-          console.log(googleUser.getBasicProfile());
+          this.newUser = googleUser.getBasicProfile();
         },
         onGoogleLoginFailure(err) {
           console.log(err);
@@ -67,6 +96,26 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    .input-group{
+      border-radius: 20px !important;
+      overflow: hidden;
+    }
+    .sign-in-text{
+      color: white;
+      text-align: center;
+      line-height: 1;
+    }
+    .sign-in-text a{
+      text-decoration: underline;
+      color: white;
+    }
+    .input-icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      background: white;
+    }
   .container-fluid {
     display: flex;
     align-items: center;
@@ -89,7 +138,8 @@
   .main-container{
     position: absolute;
     top: 50px;
-    left: 20px;
+    left: 5px;
+    padding: 0 18px;
   }
   .logo,
   .promo-text *{
@@ -100,20 +150,35 @@
     display: flex;
     flex-direction: column;
   }
-  .promo-text *{
+  .promo-text h4,
+  .promo-text h3{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 0.9;
   }
   .promo-text h4{
-    color: #bbc4bd;
+    color: #e1e1e1;
   }
-  .button-container{
+  .slider{
+    position: relative;
+    overflow: hidden;
+  }
+  .slider .slides{
+    display: flex;
+    transition: .3s left cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    position: relative;
+    flex-direction: row;
+    left: 0;
+    width: 200%;
+  }
+  .button-container,
+  .username-form{
     margin-top:20px;
-    width: 100%;
+    margin-right: 5px;
+    width: 90%;
   }
 
-  .button-container button{
+  .custom-button{
     width: 100%;
     height: 30px;
     border-radius: 20px !important;
