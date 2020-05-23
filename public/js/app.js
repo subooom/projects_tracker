@@ -15386,6 +15386,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "About"
 });
@@ -19991,7 +20035,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.section[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    background-size: cover;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\n}\n.paradise[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-dirextion: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    align-items: center;\r\n    margin-top: 50px;\n}\nh3[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 600;\r\n    font-size: 37px;\r\n    letter-spacing: 1px;\n}\np[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 35px;\r\n    font-weight: 700;\n}\n.content[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: row;\r\n    margin-top: 30px;\r\n    width: 60%;\r\n    margin-left: 55px;\r\n    height: 182px;\n}\n.content div[data-v-bd6e279a] {\r\n    margin: auto;\n}\nh5[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    letter-spacing: 2px;\r\n    text-transform: uppercase;\r\n    border-bottom: 2px solid #111;\n}\n.para[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: lighter;\n}\n.date[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    font-weight: lighter;\n}\n.about[data-v-bd6e279a] {\r\n    width: 100%;\n}\n.about h1[data-v-bd6e279a] {\r\n    margin: 50px 45px 50px;\r\n    font-size: 150px;\r\n    font-family: \"Roboto\", sans-serif;\n}\nh1[data-v-bd6e279a] {\r\n    margin-left: 158px;\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    line-height: 1em;\r\n    font-weight: bolder;\n}\n.about hr[data-v-bd6e279a] {\r\n    width: 110px;\r\n    margin: 0 0 10px;\r\n    border-top: 2px solid #111;\r\n    margin-left: 265px;\n}\nhr[data-v-bd6e279a] {\r\n    border-color: #ccc;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    height: 0;\n}\nh4[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 22px;\r\n    font-weight: 600;\r\n    letter-spacing: 1px;\n}\n.desc p[data-v-bd6e279a] {\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: lighter;\r\n    letter-spacing: 1px;\n}\n{\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\n}\nh6[data-v-bd6e279a] {\r\n    font-size: 16px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    margin-bottom: 5px;\r\n    line-height: 1.5em;\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\r\n    font-weight: 900;\n}\r\n", ""]);
+exports.push([module.i, "\n.section[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    background-size: cover;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\n}\n.horizontal-flex[data-v-bd6e279a] {\r\n    display: flex;\n}\n.paradise[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-dirextion: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    align-items: center;\r\n    margin-top: 50px;\n}\nh3[data-v-bd6e279a] {\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 600;\r\n    font-size: 37px;\r\n    letter-spacing: 1px;\n}\np[data-v-bd6e279a] {\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 35px;\r\n    font-weight: 700;\n}\n.content[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: row;\r\n    margin-top: 30px;\r\n    width: 60%;\r\n    margin-left: 55px;\r\n    height: 182px;\n}\n.content div[data-v-bd6e279a] {\r\n    margin: auto;\n}\nh5[data-v-bd6e279a] {\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    letter-spacing: 2px;\r\n    text-transform: uppercase;\r\n    border-bottom: 2px solid #111;\n}\n.para[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 400;\r\n    letter-spacing: 1.01px;\n}\n.date[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    font-weight: 400;\r\n    letter-spacing: 1.01px;\n}\n.about[data-v-bd6e279a] {\r\n    width: 100%;\n}\n.about h1[data-v-bd6e279a] {\r\n    margin: 50px 45px 50px;\r\n    font-size: 150px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    margin-left: 160px;\n}\nh1[data-v-bd6e279a] {\r\n    margin-left: 158px;\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    line-height: 1em;\r\n    font-weight: bolder;\n}\n.about hr[data-v-bd6e279a] {\r\n    width: 110px;\r\n    margin: 0 0 10px;\r\n    border-top: 2px solid #111;\r\n    margin-left: 267px;\n}\nhr[data-v-bd6e279a] {\r\n    border-color: #ccc;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    height: 0;\n}\nh4[data-v-bd6e279a] {\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 22px;\r\n    font-weight: 600;\r\n    letter-spacing: 1px;\n}\n.desc[data-v-bd6e279a] {\r\n    margin-left: 265px;\r\n    width: 263px;\n}\n.desc p[data-v-bd6e279a] {\r\n    color: #111;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: 500;\r\n    letter-spacing: 1px;\r\n    margin-top: 25px;\n}\n{\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\n}\n.bottom-panel[data-v-bd6e279a] {\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\n}\n.bottom-panel h6[data-v-bd6e279a] {\r\n    font-size: 16px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    margin-bottom: 5px;\r\n    line-height: 1.5em;\r\n    font-weight: 900;\r\n    color: #111;\n}\n.bottom-panel .theater[data-v-bd6e279a] {\r\n    font-size: 16px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 900;\r\n    color: #111;\n}\n.season[data-v-bd6e279a] {\r\n    margin-left: 95px;\r\n    width: 500px;\n}\n.heading h2[data-v-bd6e279a] {\r\n    font-family: \"Roboto\", sans-serif;\r\n    color: #111;\r\n    text-transform: uppercase;\r\n    font-size: 20px;\r\n    padding: 0 10px 0 0;\r\n    border-bottom: 2px solid #111;\r\n    line-height: 26px;\r\n    font-size: 16px;\r\n    font-weight: 400;\r\n    margin-top: 20px;\r\n    letter-spacing: 1px;\r\n    width: 156px;\n}\n.page-title[data-v-bd6e279a] {\r\n    margin-left: 162px;\n}\n.solo[data-v-bd6e279a] {\r\n    margin-bottom: 20px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 38px;\r\n    font-weight: 400;\r\n    line-height: 1;\n}\n.creater[data-v-bd6e279a] {\r\n    display: flex;\r\n    margin-top: 45px;\n}\n.creater2[data-v-bd6e279a] {\r\n    margin-left: 83px;\n}\n.name[data-v-bd6e279a] {\r\n    margin: auto;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #111;\r\n    margin-top: 8px;\n}\n.job[data-v-bd6e279a] {\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    text-transform: uppercase;\r\n    color: #111;\r\n    margin-top: 8px;\n}\r\n", ""]);
 
 // exports
 
@@ -52205,60 +52249,121 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "about" }, [
-        _c("h1", { staticStyle: { "margin-left": "162px" } }, [
-          _vm._v("about")
-        ]),
+        _c("h1", { staticClass: "page-title" }, [_vm._v("about")]),
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "desc",
-            staticStyle: { "margin-left": "263px", width: "263px" }
-          },
-          [
-            _c("h4", [
-              _vm._v(
-                "\n                Established in 1997, Silo Theatre is one of the leading\n                producers of contemporary theatre in Aotearoa.\n            "
-              )
+        _c("div", { staticClass: "horizontal-flex" }, [
+          _c("div", { staticClass: "desc" }, [
+            _c("div", { staticClass: "top-panel" }, [
+              _c("h4", [
+                _vm._v(
+                  "\n                        Established in 1997, Silo Theatre is one of the\n                        leading producers of contemporary theatre in\n                        Aotearoa.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        We curate an annual season of work in direct\n                        response to the world around us, constantly evolving\n                        in response to our cultural climate. We seek to push\n                        storytelling, artists and audiences forward, both in\n                        our programming and company culture.\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        We aim to invigorate, agitate and illuminate. We\n                        believe in theatre as a powerful agent for change.\n                    "
+                )
+              ])
             ]),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                We curate an annual season of work in direct response to the\n                world around us, constantly evolving in response to our\n                cultural climate. We seek to push storytelling, artists and\n                audiences forward, both in our programming and company\n                culture.\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                We aim to invigorate, agitate and illuminate. We believe in\n                theatre as a powerful agent for change.\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c("h6", [_c("p", [_vm._v("SILO THEATRE TRUST")])]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("\n                Jo Allison"),
-              _c("br"),
-              _vm._v("Rick Carlyon (Chair)"),
-              _c("br"),
-              _vm._v("Greg Fahey"),
-              _c("br"),
-              _vm._v("Sharon\n                Aroha Hawke"),
-              _c("br"),
-              _vm._v("Rachel Paris"),
-              _c("br"),
-              _vm._v("Sarah Peirse"),
-              _c("br"),
-              _vm._v("Rosabel\n                Tan"),
-              _c("br"),
-              _vm._v("Peter Winder\n            ")
+            _c("div", { staticClass: "bottom-panel" }, [
+              _c("h6", [
+                _c("p", { staticClass: "theater" }, [
+                  _vm._v("SILO THEATRE TRUST")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v("\n                        Jo Allison"),
+                _c("br"),
+                _vm._v("Rick Carlyon (Chair)"),
+                _c("br"),
+                _vm._v("Greg\n                        Fahey"),
+                _c("br"),
+                _vm._v("Sharon Aroha Hawke"),
+                _c("br"),
+                _vm._v("Rachel Paris"),
+                _c("br"),
+                _vm._v("Sarah\n                        Peirse"),
+                _c("br"),
+                _vm._v("Rosabel Tan"),
+                _c("br"),
+                _vm._v("Peter Winder\n                    ")
+              ])
             ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "people" }, [_c("p", [_vm._v("primer")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "season" }, [
+            _c("div", { staticClass: "heading" }, [
+              _c("h2", [_vm._v("season archive")]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("p", { staticClass: "solo" }, [
+                _vm._v("SILO THEATRE IS ANTI–STATIC.")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "creater" }, [
+              _c("div", { staticClass: "creater1" }, [
+                _c("img", {
+                  staticClass: " loaded",
+                  attrs: {
+                    src: "/img/1.jpg",
+                    alt: "sushma",
+                    width: "110",
+                    height: "160"
+                  }
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "name" }, [
+                  _vm._v(
+                    "\n                            Sushma Chaudhary\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job" }, [
+                  _vm._v(
+                    "\n                            Web Developer\n                        "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "creater2" }, [
+                _c("img", {
+                  staticClass: " image",
+                  attrs: {
+                    src: "/img/2.jpg",
+                    alt: "Subham",
+                    width: "110",
+                    height: "160"
+                  }
+                }),
+                _vm._v(" "),
+                _c("p", { staticClass: "name" }, [
+                  _vm._v(
+                    "\n                            Subham Kharel\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "job" }, [
+                  _vm._v(
+                    "\n                            Web Developer\n                        "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
       ])
     ])
   }

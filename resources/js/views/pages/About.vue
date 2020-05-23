@@ -52,33 +52,79 @@
             </div>
         </div>
         <div class="about">
-            <h1 style="margin-left: 162px;">about</h1>
+            <h1 class="page-title">about</h1>
             <hr />
-            <div class="desc" style="margin-left:263px;width: 263px">
-                <h4>
-                    Established in 1997, Silo Theatre is one of the leading
-                    producers of contemporary theatre in Aotearoa.
-                </h4>
-                <p>
-                    We curate an annual season of work in direct response to the
-                    world around us, constantly evolving in response to our
-                    cultural climate. We seek to push storytelling, artists and
-                    audiences forward, both in our programming and company
-                    culture.
-                </p>
-                <p>
-                    We aim to invigorate, agitate and illuminate. We believe in
-                    theatre as a powerful agent for change.
-                </p>
+            <div class="horizontal-flex">
+                <div class="desc">
+                    <div class="top-panel">
+                        <h4>
+                            Established in 1997, Silo Theatre is one of the
+                            leading producers of contemporary theatre in
+                            Aotearoa.
+                        </h4>
+                        <p>
+                            We curate an annual season of work in direct
+                            response to the world around us, constantly evolving
+                            in response to our cultural climate. We seek to push
+                            storytelling, artists and audiences forward, both in
+                            our programming and company culture.
+                        </p>
 
-                <h6><p>SILO THEATRE TRUST</p></h6>
-                <p>
-                    Jo Allison<br />Rick Carlyon (Chair)<br />Greg Fahey<br />Sharon
-                    Aroha Hawke<br />Rachel Paris<br />Sarah Peirse<br />Rosabel
-                    Tan<br />Peter Winder
-                </p>
+                        <p>
+                            We aim to invigorate, agitate and illuminate. We
+                            believe in theatre as a powerful agent for change.
+                        </p>
+                    </div>
+                    <div class="bottom-panel">
+                        <h6><p class="theater">SILO THEATRE TRUST</p></h6>
+                        <p>
+                            Jo Allison<br />Rick Carlyon (Chair)<br />Greg
+                            Fahey<br />Sharon Aroha Hawke<br />Rachel Paris<br />Sarah
+                            Peirse<br />Rosabel Tan<br />Peter Winder
+                        </p>
+                    </div>
+                </div>
+
+                <div class="season">
+                    <div class="heading">
+                        <h2>season archive</h2>
+                        <br />
+                        <p class="solo">SILO THEATRE IS ANTI–STATIC.</p>
+                    </div>
+                    <div class="creater">
+                        <div class="creater1">
+                            <img
+                                src="/img/1.jpg"
+                                alt="sushma"
+                                width="110"
+                                height="160"
+                                class=" loaded"
+                            />
+                            <p class="name">
+                                Sushma Chaudhary
+                            </p>
+                            <p class="job">
+                                Web Developer
+                            </p>
+                        </div>
+                        <div class="creater2">
+                            <img
+                                src="/img/2.jpg"
+                                alt="Subham"
+                                width="110"
+                                height="160"
+                                class=" image"
+                            />
+                            <p class="name">
+                                Subham Kharel
+                            </p>
+                            <p class="job">
+                                Web Developer
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            >
         </div>
     </div>
 </template>
@@ -107,6 +153,9 @@ export default {
     bottom: 0;
     left: 0;
 }
+.horizontal-flex {
+    display: flex;
+}
 .paradise {
     display: flex;
     flex-dirextion: row;
@@ -119,7 +168,7 @@ export default {
 }
 
 h3 {
-    color: black;
+    color: #111;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 37px;
@@ -127,7 +176,7 @@ h3 {
 }
 
 p {
-    color: black;
+    color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -146,7 +195,7 @@ p {
     margin: auto;
 }
 h5 {
-    color: black;
+    color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -157,17 +206,19 @@ h5 {
 
 .para {
     font-size: 13px;
-    color: rgb(16, 16, 16);
+    color: #111;
     font-family: "Roboto", sans-serif;
-    font-weight: lighter;
+    font-weight: 400;
+    letter-spacing: 1.01px;
 }
 
 .date {
     font-size: 13px;
-    color: rgb(16, 16, 16);
+    color: #111;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: 400;
+    letter-spacing: 1.01px;
 }
 
 .about {
@@ -177,10 +228,11 @@ h5 {
     margin: 50px 45px 50px;
     font-size: 150px;
     font-family: "Roboto", sans-serif;
+    margin-left: 160px;
 }
 h1 {
     margin-left: 158px;
-    color: black;
+    color: #111;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -192,7 +244,7 @@ h1 {
     width: 110px;
     margin: 0 0 10px;
     border-top: 2px solid #111;
-    margin-left: 265px;
+    margin-left: 267px;
 }
 hr {
     border-color: #ccc;
@@ -202,19 +254,24 @@ hr {
 }
 
 h4 {
-    color: black;
+    color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
 }
+.desc {
+    margin-left: 265px;
+    width: 263px;
+}
 
 .desc p {
-    color: rgb(16, 16, 16);
+    color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
-    font-weight: lighter;
+    font-weight: 500;
     letter-spacing: 1px;
+    margin-top: 25px;
 }
 
  {
@@ -222,14 +279,80 @@ h4 {
     padding: 10px 0 0;
     margin-top: 40px;
 }
-h6 {
+
+.bottom-panel {
+    border-top: 2px #111 solid;
+    padding: 10px 0 0;
+    margin-top: 40px;
+}
+
+.bottom-panel h6 {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     margin-bottom: 5px;
     line-height: 1.5em;
-    border-top: 2px #111 solid;
-    padding: 10px 0 0;
-    margin-top: 40px;
     font-weight: 900;
+    color: #111;
+}
+.bottom-panel .theater {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: #111;
+}
+.season {
+    margin-left: 95px;
+    width: 500px;
+}
+.heading h2 {
+    font-family: "Roboto", sans-serif;
+    color: #111;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0 10px 0 0;
+    border-bottom: 2px solid #111;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    width: 156px;
+}
+.page-title {
+    margin-left: 162px;
+}
+
+.solo {
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+}
+.creater {
+    display: flex;
+    margin-top: 45px;
+}
+
+.creater2 {
+    margin-left: 83px;
+}
+.name {
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 8px;
+}
+
+.job {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 8px;
 }
 </style>
