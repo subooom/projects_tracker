@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Our main route for the vue app, if you go to vue.blade.php you will see a div with id of #app, vue works like react.
 Route::get('/', function(){
-  return view('vue');
+  return view('paradiseinself');
 });
 
 
@@ -38,15 +38,22 @@ Route::get('/{slug}/settings','ProjectShowController@settings');
 
 
 
-
-
-
-
-
-
 // REST API
 
-Route::get('/api/fetchAllUsers','UserController@index');
+// Route::prefix('api') leh tes vitra vako sab routes ko agadi /api/ haldincha
+
+Route::prefix('api')->group(function (){
+    // User Routes
+
+    // Route::prefix('users') leh tes vitra vako sab routes ko agadi /users/ haldincha
+
+    Route::prefix('users')->group(function (){
+
+      // So this route is actually /api/users/fetch-all-users
+      Route::get('fetch-all-users','UserController@index');
+
+    });
+});
 
 ?>
 

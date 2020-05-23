@@ -1,0 +1,10 @@
+{
+  "api" :{
+    "auth": {
+      "is-logged-in": "is-logged-in"
+    },
+    "users":{
+      "fetchAll": "fetch-all-users"
+    }
+  }
+}

@@ -28,6 +28,8 @@
         "@fortawesome/free-brands-svg-icons": "^5.13.0",
         "@fortawesome/free-solid-svg-icons": "^5.13.0",
         "@fortawesome/vue-fontawesome": "^0.1.9",
+        "config": "^3.3.1",
+        "vue-facebook-login-button-directive": "0.0.1",
         "vue-google-login": "^2.0.3",
         "vue-router": "^3.2.0"
     }
