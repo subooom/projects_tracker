@@ -1,9 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\User as UserResource;
 
 class UserController extends Controller
 {
@@ -14,12 +15,25 @@ class UserController extends Controller
      */
     public function index()
     {
-      $users = User::all();
       $headers = [
-        'GET', 'All users fetched!'
+        'headers' => [
+          'method' => 'GET',
+          'message' => 'All users fetched!',
+          'code' => 200
+        ]
       ];
 
-      echo response()->json($users, 200, $headers);
+      return UserResource::collection(User::paginate()) ->additional($headers);
+    }
+
+    /**
+     * IsLoggedIn for checking if the user is logged in or not.
+     *
+     * @return boolean
+     */
+
+    public function isLoggedIn(){
+      return new UserResource(Auth::check());
     }
 
     /**

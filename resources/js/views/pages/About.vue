@@ -116,7 +116,7 @@ h3 {
     color: black;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-    font-size: 37px;
+    font-size: 29px;
     letter-spacing: 1px;
 }
 

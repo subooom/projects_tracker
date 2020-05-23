@@ -4,8 +4,7 @@
  */
 
 import Home from './Home.vue';
-import SignUp from './SignUp.vue';
-import Login from './Login.vue';
+import ProjectsTracker from './projects_tracker/Index.vue';
 import About from './About.vue';
 
 
@@ -22,22 +21,7 @@ export default [
   {
     path: '/projects-tracker',
     name: 'projectsTracker',
-    component: SignUp
-  },
-  {
-    path: '/ktm-rock',
-    name: 'ktmRock',
-    component: SignUp
-  },
-  {
-    path: '/sign-up',
-    name: 'signUp',
-    component: SignUp
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: Login
+    component: ProjectsTracker
   },
   {
     path: '/about',

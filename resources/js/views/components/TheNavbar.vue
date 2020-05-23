@@ -13,6 +13,9 @@
           <router-link class="nav-link" :to="{ name: 'projectsTracker' }">Projects Tracker</router-link>
         </li>
         <li class="nav-item">
+          <router-link class="nav-link" :to="{ name: 'jodGhatau' }">Jod Ghatau</router-link>
+        </li>
+        <li class="nav-item">
           <router-link class="nav-link" :to="{ name: 'ktmRock' }">KTM Rock</router-link>
         </li>
         <li @click="doSomethingCool" class="nav-item">
