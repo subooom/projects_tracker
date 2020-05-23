@@ -46,17 +46,15 @@
                     Tell us who you are. Tell us where you come from.
                 </p>
                 <p class="date">
-                    5.nov—
-
-                    <br />
+                    5.nov— <br />
                     28.nov.19
                 </p>
             </div>
         </div>
-        <div class="about" style="margin-left:130px">
-            <h1>about</h1>
+        <div class="about">
+            <h1 style="margin-left: 162px;">about</h1>
             <hr />
-            <div class="desc" style="margin-left:133px">
+            <div class="desc" style="margin-left:263px;width: 263px">
                 <h4>
                     Established in 1997, Silo Theatre is one of the leading
                     producers of contemporary theatre in Aotearoa.
@@ -72,7 +70,15 @@
                     We aim to invigorate, agitate and illuminate. We believe in
                     theatre as a powerful agent for change.
                 </p>
+
+                <h6><p>SILO THEATRE TRUST</p></h6>
+                <p>
+                    Jo Allison<br />Rick Carlyon (Chair)<br />Greg Fahey<br />Sharon
+                    Aroha Hawke<br />Rachel Paris<br />Sarah Peirse<br />Rosabel
+                    Tan<br />Peter Winder
+                </p>
             </div>
+            >
         </div>
     </div>
 </template>
@@ -164,11 +170,16 @@ h5 {
     font-weight: lighter;
 }
 
+.about {
+    width: 100%;
+}
 .about h1 {
     margin: 50px 45px 50px;
     font-size: 150px;
+    font-family: "Roboto", sans-serif;
 }
 h1 {
+    margin-left: 158px;
     color: black;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
@@ -181,7 +192,7 @@ h1 {
     width: 110px;
     margin: 0 0 10px;
     border-top: 2px solid #111;
-    margin-left: 133px;
+    margin-left: 265px;
 }
 hr {
     border-color: #ccc;
@@ -193,7 +204,7 @@ hr {
 h4 {
     color: black;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -204,5 +215,21 @@ h4 {
     font-size: 12px;
     font-weight: lighter;
     letter-spacing: 1px;
+}
+
+ {
+    border-top: 2px #111 solid;
+    padding: 10px 0 0;
+    margin-top: 40px;
+}
+h6 {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+    border-top: 2px #111 solid;
+    padding: 10px 0 0;
+    margin-top: 40px;
+    font-weight: 900;
 }
 </style>

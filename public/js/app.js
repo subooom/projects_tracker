@@ -15378,6 +15378,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "About"
 });
@@ -19983,7 +19991,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.section[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    background-size: cover;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\n}\n.paradise[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-dirextion: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    align-items: center;\r\n    margin-top: 50px;\n}\nh3[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 600;\r\n    font-size: 37px;\r\n    letter-spacing: 1px;\n}\np[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 35px;\r\n    font-weight: 700;\n}\n.content[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: row;\r\n    margin-top: 30px;\r\n    width: 60%;\r\n    margin-left: 55px;\r\n    height: 182px;\n}\n.content div[data-v-bd6e279a] {\r\n    margin: auto;\n}\nh5[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    letter-spacing: 2px;\r\n    text-transform: uppercase;\r\n    border-bottom: 2px solid #111;\n}\n.para[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: lighter;\n}\n.date[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    font-weight: lighter;\n}\n.about h1[data-v-bd6e279a] {\r\n    margin: 50px 45px 50px;\r\n    font-size: 150px;\n}\nh1[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    line-height: 1em;\r\n    font-weight: bolder;\n}\n.about hr[data-v-bd6e279a] {\r\n    width: 110px;\r\n    margin: 0 0 10px;\r\n    border-top: 2px solid #111;\r\n    margin-left: 133px;\n}\nhr[data-v-bd6e279a] {\r\n    border-color: #ccc;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    height: 0;\n}\nh4[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    letter-spacing: 1px;\n}\n.desc p[data-v-bd6e279a] {\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: lighter;\r\n    letter-spacing: 1px;\n}\r\n", ""]);
+exports.push([module.i, "\n.section[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    background-size: cover;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    left: 0;\n}\n.paradise[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-dirextion: row;\r\n    justify-content: center;\r\n    align-items: center;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    align-items: center;\r\n    margin-top: 50px;\n}\nh3[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: 600;\r\n    font-size: 37px;\r\n    letter-spacing: 1px;\n}\np[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 35px;\r\n    font-weight: 700;\n}\n.content[data-v-bd6e279a] {\r\n    display: flex;\r\n    flex-direction: row;\r\n    margin-top: 30px;\r\n    width: 60%;\r\n    margin-left: 55px;\r\n    height: 182px;\n}\n.content div[data-v-bd6e279a] {\r\n    margin: auto;\n}\nh5[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n    letter-spacing: 2px;\r\n    text-transform: uppercase;\r\n    border-bottom: 2px solid #111;\n}\n.para[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-weight: lighter;\n}\n.date[data-v-bd6e279a] {\r\n    font-size: 13px;\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    font-weight: lighter;\n}\n.about[data-v-bd6e279a] {\r\n    width: 100%;\n}\n.about h1[data-v-bd6e279a] {\r\n    margin: 50px 45px 50px;\r\n    font-size: 150px;\r\n    font-family: \"Roboto\", sans-serif;\n}\nh1[data-v-bd6e279a] {\r\n    margin-left: 158px;\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    line-height: 1em;\r\n    font-weight: bolder;\n}\n.about hr[data-v-bd6e279a] {\r\n    width: 110px;\r\n    margin: 0 0 10px;\r\n    border-top: 2px solid #111;\r\n    margin-left: 265px;\n}\nhr[data-v-bd6e279a] {\r\n    border-color: #ccc;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    height: 0;\n}\nh4[data-v-bd6e279a] {\r\n    color: black;\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 22px;\r\n    font-weight: 600;\r\n    letter-spacing: 1px;\n}\n.desc p[data-v-bd6e279a] {\r\n    color: rgb(16, 16, 16);\r\n    font-family: \"Roboto\", sans-serif;\r\n    font-size: 12px;\r\n    font-weight: lighter;\r\n    letter-spacing: 1px;\n}\n{\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\n}\nh6[data-v-bd6e279a] {\r\n    font-size: 16px;\r\n    font-family: \"Roboto\", sans-serif;\r\n    margin-bottom: 5px;\r\n    line-height: 1.5em;\r\n    border-top: 2px #111 solid;\r\n    padding: 10px 0 0;\r\n    margin-top: 40px;\r\n    font-weight: 900;\n}\r\n", ""]);
 
 // exports
 
@@ -52189,46 +52197,69 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("p", { staticClass: "date" }, [
-            _vm._v("\n                5.nov—\n\n                "),
+            _vm._v("\n                5.nov— "),
             _c("br"),
             _vm._v("\n                28.nov.19\n            ")
           ])
         ])
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "about", staticStyle: { "margin-left": "130px" } },
-        [
-          _c("h1", [_vm._v("about")]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "desc", staticStyle: { "margin-left": "133px" } },
-            [
-              _c("h4", [
-                _vm._v(
-                  "\n                Established in 1997, Silo Theatre is one of the leading\n                producers of contemporary theatre in Aotearoa.\n            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                We curate an annual season of work in direct response to the\n                world around us, constantly evolving in response to our\n                cultural climate. We seek to push storytelling, artists and\n                audiences forward, both in our programming and company\n                culture.\n            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                We aim to invigorate, agitate and illuminate. We believe in\n                theatre as a powerful agent for change.\n            "
-                )
-              ])
-            ]
-          )
-        ]
-      )
+      _c("div", { staticClass: "about" }, [
+        _c("h1", { staticStyle: { "margin-left": "162px" } }, [
+          _vm._v("about")
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "desc",
+            staticStyle: { "margin-left": "263px", width: "263px" }
+          },
+          [
+            _c("h4", [
+              _vm._v(
+                "\n                Established in 1997, Silo Theatre is one of the leading\n                producers of contemporary theatre in Aotearoa.\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                We curate an annual season of work in direct response to the\n                world around us, constantly evolving in response to our\n                cultural climate. We seek to push storytelling, artists and\n                audiences forward, both in our programming and company\n                culture.\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                We aim to invigorate, agitate and illuminate. We believe in\n                theatre as a powerful agent for change.\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h6", [_c("p", [_vm._v("SILO THEATRE TRUST")])]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v("\n                Jo Allison"),
+              _c("br"),
+              _vm._v("Rick Carlyon (Chair)"),
+              _c("br"),
+              _vm._v("Greg Fahey"),
+              _c("br"),
+              _vm._v("Sharon\n                Aroha Hawke"),
+              _c("br"),
+              _vm._v("Rachel Paris"),
+              _c("br"),
+              _vm._v("Sarah Peirse"),
+              _c("br"),
+              _vm._v("Rosabel\n                Tan"),
+              _c("br"),
+              _vm._v("Peter Winder\n            ")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "people" }, [_c("p", [_vm._v("primer")])])
+      ])
     ])
   }
 ]
