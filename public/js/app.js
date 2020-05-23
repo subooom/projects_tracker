@@ -15509,6 +15509,31 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_google_login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-google-login */ "./node_modules/vue-google-login/dist/vue-google-login.min.js");
 /* harmony import */ var vue_google_login__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_google_login__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15544,10 +15569,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'SignUp',
   components: {
     GoogleLogin: vue_google_login__WEBPACK_IMPORTED_MODULE_0___default.a
+  },
+  mounted: function mounted() {
+    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/fetchAllUsers').then(function (err, resp) {
+      return console.log(resp);
+    });
   },
   data: function data() {
     return {
@@ -15558,13 +15589,15 @@ __webpack_require__.r(__webpack_exports__);
         width: 250,
         height: 50,
         longtitle: true
-      }
+      },
+      newUser: {}
     };
   },
   methods: {
     onGoogleLoginSuccess: function onGoogleLoginSuccess(googleUser) {
-      console.log(googleUser);
-      console.log(googleUser.getBasicProfile());
+      var slides = document.querySelector('.slides');
+      slides.style.left = -(slides.children[0].clientWidth + 4) + 'px';
+      this.newUser = googleUser.getBasicProfile();
     },
     onGoogleLoginFailure: function onGoogleLoginFailure(err) {
       console.log(err);
@@ -20073,7 +20106,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "\n.container-fluid[data-v-3fb89dfc] {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-image: url('https://picsum.photos/1920/1080');\r\n    background-size: cover;\n}\n.sign-up-container[data-v-3fb89dfc]{\r\n    position: relative;\n}\n.sign-up-bg[data-v-3fb89dfc]{\r\n    -webkit-backdrop-filter: blur(2px) grayscale(2%);\r\n            backdrop-filter: blur(2px) grayscale(2%);\r\n    width: 235px;\n}\n.main-container[data-v-3fb89dfc]{\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 20px;\n}\n.logo[data-v-3fb89dfc],\r\n  .promo-text *[data-v-3fb89dfc]{\r\n    text-shadow: 1px 1px #000000 2px;\n}\n.promo-text[data-v-3fb89dfc]{\r\n    margin-top: 70px;\r\n    display: flex;\r\n    flex-direction: column;\n}\n.promo-text *[data-v-3fb89dfc]{\r\n    margin: 0;\r\n    font-family: 'Roboto', sans-serif;\r\n    line-height: 0.9;\n}\n.promo-text h4[data-v-3fb89dfc]{\r\n    color: #bbc4bd;\n}\n.button-container[data-v-3fb89dfc]{\r\n    margin-top:20px;\r\n    width: 100%;\n}\n.button-container button[data-v-3fb89dfc]{\r\n    width: 100%;\r\n    height: 30px;\r\n    border-radius: 20px !important;\r\n    border: none;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    margin-bottom: 10px;\r\n    background: white;\r\n    transition: .3s background ease-in;\n}\n.button-container button[data-v-3fb89dfc]:hover{\r\n    background: rgb(183, 220, 255);\n}\n.button-container button svg[data-v-3fb89dfc]{\r\n    position: absolute;\r\n    left: 10px;\n}\n.button-container button span[data-v-3fb89dfc]{\r\n    font-weight: 600;\n}\r\n", ""]);
+exports.push([module.i, "\n.input-group[data-v-3fb89dfc]{\r\n      border-radius: 20px !important;\r\n      overflow: hidden;\n}\n.sign-in-text[data-v-3fb89dfc]{\r\n      color: white;\r\n      text-align: center;\r\n      line-height: 1;\n}\n.sign-in-text a[data-v-3fb89dfc]{\r\n      text-decoration: underline;\r\n      color: white;\n}\n.input-icon[data-v-3fb89dfc]{\r\n      display: flex;\r\n      align-items: center;\r\n      justify-content: center;\r\n      padding: 8px;\r\n      background: white;\n}\n.container-fluid[data-v-3fb89dfc] {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-image: url('https://picsum.photos/1920/1080');\r\n    background-size: cover;\n}\n.sign-up-container[data-v-3fb89dfc]{\r\n    position: relative;\n}\n.sign-up-bg[data-v-3fb89dfc]{\r\n    -webkit-backdrop-filter: blur(2px) grayscale(2%);\r\n            backdrop-filter: blur(2px) grayscale(2%);\r\n    width: 235px;\n}\n.main-container[data-v-3fb89dfc]{\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 5px;\r\n    padding: 0 18px;\n}\n.logo[data-v-3fb89dfc],\r\n  .promo-text *[data-v-3fb89dfc]{\r\n    text-shadow: 1px 1px #000000 2px;\n}\n.promo-text[data-v-3fb89dfc]{\r\n    margin-top: 70px;\r\n    display: flex;\r\n    flex-direction: column;\n}\n.promo-text h4[data-v-3fb89dfc],\r\n  .promo-text h3[data-v-3fb89dfc]{\r\n    margin: 0;\r\n    font-family: 'Roboto', sans-serif;\r\n    line-height: 0.9;\n}\n.promo-text h4[data-v-3fb89dfc]{\r\n    color: #e1e1e1;\n}\n.slider[data-v-3fb89dfc]{\r\n    position: relative;\r\n    overflow: hidden;\n}\n.slider .slides[data-v-3fb89dfc]{\r\n    display: flex;\r\n    transition: .3s left cubic-bezier(0.250, 0.460, 0.450, 0.940);\r\n    position: relative;\r\n    flex-direction: row;\r\n    left: 0;\r\n    width: 200%;\n}\n.button-container[data-v-3fb89dfc],\r\n  .username-form[data-v-3fb89dfc]{\r\n    margin-top:20px;\r\n    margin-right: 5px;\r\n    width: 90%;\n}\n.custom-button[data-v-3fb89dfc]{\r\n    width: 100%;\r\n    height: 30px;\r\n    border-radius: 20px !important;\r\n    border: none;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    margin-bottom: 10px;\r\n    background: white;\r\n    transition: .3s background ease-in;\n}\n.button-container button[data-v-3fb89dfc]:hover{\r\n    background: rgb(183, 220, 255);\n}\n.button-container button svg[data-v-3fb89dfc]{\r\n    position: absolute;\r\n    left: 10px;\n}\n.button-container button span[data-v-3fb89dfc]{\r\n    font-weight: 600;\n}\r\n", ""]);
 
 // exports
 
@@ -52485,71 +52518,156 @@ var render = function() {
       _c("div", { staticClass: "main-container" }, [
         _c("h4", { staticClass: "logo" }, [_vm._v("paradiseinself")]),
         _vm._v(" "),
-        _c("div", { staticClass: "promo-text" }, [
-          _c("h4", [_vm._v("ONE")]),
-          _vm._v(" "),
-          _c("h4", [_vm._v("DAY")]),
-          _vm._v(" "),
-          _c("h4", [_vm._v("AT A")]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("TIME.")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "button-container" },
-            [
-              _c(
-                "button",
-                [
-                  _c("font-awesome-icon", {
-                    attrs: { icon: ["fas", "envelope"] }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Email")])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "GoogleLogin",
-                {
-                  staticClass: "google-login-button",
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "slider" }, [
+          _c("div", { staticClass: "slides" }, [
+            _c(
+              "div",
+              { staticClass: "button-container" },
+              [
+                _c(
+                  "button",
+                  { staticClass: "custom-button" },
+                  [
+                    _c("font-awesome-icon", {
+                      attrs: { icon: ["fas", "envelope"] }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Email")])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "GoogleLogin",
+                  {
+                    staticClass: "google-login-button custom-button",
+                    attrs: {
+                      params: _vm.params,
+                      onSuccess: _vm.onGoogleLoginSuccess,
+                      onFailure: _vm.onGoogleLoginFailure
+                    }
+                  },
+                  [
+                    _c("font-awesome-icon", {
+                      attrs: { icon: ["fab", "google"] }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Google")])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  { staticClass: "custom-button" },
+                  [
+                    _c("font-awesome-icon", {
+                      attrs: { icon: ["fab", "facebook"] }
+                    }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Facebook")])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "sign-in-text" },
+                  [
+                    _vm._v("Already a member? "),
+                    _c("router-link", { attrs: { to: "{name:'login}" } }, [
+                      _vm._v("Sign in!")
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("form", { staticClass: "username-form" }, [
+              _c("div", { staticClass: "input-group mb-3" }, [
+                _c(
+                  "span",
+                  { staticClass: "input-icon" },
+                  [
+                    _c("font-awesome-icon", {
+                      attrs: { icon: ["fas", "envelope"] }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  staticStyle: { border: "none" },
                   attrs: {
-                    params: _vm.params,
-                    onSuccess: _vm.onGoogleLoginSuccess,
-                    onFailure: _vm.onGoogleLoginFailure
+                    type: "text",
+                    placeholder: "Username",
+                    "aria-label": "Username",
+                    "aria-describedby": "username input"
                   }
-                },
-                [
-                  _c("font-awesome-icon", {
-                    attrs: { icon: ["fab", "google"] }
-                  }),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Google")])
-                ],
-                1
-              ),
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "button",
+                { staticClass: "custom-button" },
                 [
-                  _c("font-awesome-icon", {
-                    attrs: { icon: ["fab", "facebook"] }
-                  }),
+                  _c("font-awesome-icon", { attrs: { icon: ["fas", "save"] } }),
                   _vm._v(" "),
-                  _c("span", [_vm._v("Facebook")])
+                  _c("span", [_vm._v("Save")])
                 ],
                 1
               )
-            ],
-            1
-          )
+            ])
+          ])
         ])
       ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "promo-text" }, [
+      _c("h4", [_vm._v("1")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("DAY")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("AT A")]),
+      _vm._v(" "),
+      _c("h3", [_vm._v("TIME.")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group mb-3" }, [
+      _c("img", { attrs: { src: "newUser.SK" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "custom-file" }, [
+        _c("input", {
+          staticClass: "custom-file-input",
+          attrs: { type: "file", id: "avatar" }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "custom-file-label", attrs: { for: "avatar" } },
+          [_vm._v("Choose Avatar")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -67755,7 +67873,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faEnvelope"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faSave"]);
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__["library"].add(_fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faGoogle"]);
 _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__["library"].add(_fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faFacebook"]);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");

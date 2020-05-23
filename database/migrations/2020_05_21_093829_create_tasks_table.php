@@ -25,9 +25,6 @@ class CreateTasksTable extends Migration
             $table->integer('hours_needed');
             $table->string('extensions');
             $table->string('status');
-
-
-
         });
     }
 

@@ -31,6 +31,23 @@ Route::get('/{slug}/task','ProjectShowController@task');
 Route::get('/{slug}/erd','ProjectShowController@erd');
 Route::get('/{slug}/progress','ProjectShowController@progress');
 Route::get('/{slug}/settings','ProjectShowController@settings');
+
+
+
+
+
+
+
+
+
+
+
+
+
+// REST API
+
+Route::get('/api/fetchAllUsers','UserController@index');
+
 ?>
 
 
