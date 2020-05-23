@@ -58,21 +58,26 @@
                 <div class="desc">
                     <div class="top-panel">
                         <h4>
-                            Established in 1997, Silo Theatre is one of the
-                            leading producers of contemporary theatre in
-                            Aotearoa.
+                            Established in 2020, Project Tracker is a highly
+                            configurable artifact tracking app that meets the
+                            needs of different types of projects as well as
+                            individual users.
                         </h4>
                         <p>
-                            We curate an annual season of work in direct
-                            response to the world around us, constantly evolving
-                            in response to our cultural climate. We seek to push
-                            storytelling, artists and audiences forward, both in
-                            our programming and company culture.
+                            This is a open-sourced projects tracker, manager
+                            application, which helps you add projects and then
+                            define tasks, time frames, ERD, wire frames, get
+                            notified for each task, and if it's completed or
+                            not, the user will then modify the task completion
+                            details, or add extension period for the specific
+                            task.
                         </p>
 
                         <p>
-                            We aim to invigorate, agitate and illuminate. We
-                            believe in theatre as a powerful agent for change.
+                            We aim to invigorate, agitate and illuminate.As
+                            effective time tracking helps also the resources, in
+                            order to keep track of their normal work time as
+                            well as the overtime they have put in.
                         </p>
                     </div>
                     <div class="bottom-panel">
@@ -94,32 +99,28 @@
                     <div class="creater">
                         <div class="creater1">
                             <img
-                                src="/img/1.jpg"
+                                src="/img/sus.png"
                                 alt="sushma"
-                                width="110"
-                                height="160"
-                                class=" loaded"
+                                class=" image"
                             />
                             <p class="name">
                                 Sushma Chaudhary
                             </p>
                             <p class="job">
-                                Web Developer
+                                Founder
                             </p>
                         </div>
                         <div class="creater2">
                             <img
-                                src="/img/2.jpg"
+                                src="/img/hehe.jpg"
                                 alt="Subham"
-                                width="110"
-                                height="160"
                                 class=" image"
                             />
                             <p class="name">
                                 Subham Kharel
                             </p>
                             <p class="job">
-                                Web Developer
+                                Founder
                             </p>
                         </div>
                     </div>
@@ -354,5 +355,11 @@ h4 {
     text-transform: uppercase;
     color: #111;
     margin-top: 8px;
+}
+
+.image {
+    width: 110px;
+    height: 160px;
+    object-fit: cover;
 }
 </style>
