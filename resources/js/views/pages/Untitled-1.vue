@@ -1,15 +1,17 @@
 <template>
     <div class="about-section">
-        <div class="about-title">
+        <div class="paradise">
             <h3>
-                ParadiseInSelf<br />
+                ParadiseInSelf
+                <br />
                 Season — 2020
             </h3>
         </div>
-        <div class="about-content">
+
+        <div class="content">
             <div>
                 <h5>UPU</h5>
-                <p class="detail" style="min-height: 26px">WE ARE OCEANIA</p>
+                <p class="para" style="min-height: 26px">WE ARE OCEANIA</p>
                 <p class="date">
                     5.mar— <br />
                     15.mar.20
@@ -18,7 +20,7 @@
 
             <div>
                 <h5>The Writer</h5>
-                <p class="detail" style="min-height: 26px">
+                <p class="para" style="min-height: 26px">
                     A Ferocious call to arms
                 </p>
                 <p class="date">
@@ -28,13 +30,9 @@
             </div>
 
             <div>
-                <h5>
-                    Every Brilliant <br />
-                    Thing
-                </h5>
-                <p class="detail" style="min-height: 26px">
-                    What would you put on <br />
-                    your list?
+                <h5>Every Brilliant Thing</h5>
+                <p class="para" style="min-height: 26px">
+                    What would you put on your list?
                 </p>
                 <p class="date">
                     25.aug— <br />
@@ -44,9 +42,8 @@
 
             <div>
                 <h5>BREAK BREAD</h5>
-                <p class="detail" style="min-height: 26px;">
-                    Tell us who you are. Tell<br />
-                    us where you come from.
+                <p class="para" style="min-height: 26px;">
+                    Tell us who you are. Tell us where you come from.
                 </p>
                 <p class="date">
                     5.nov— <br />
@@ -55,35 +52,45 @@
             </div>
         </div>
         <div class="about">
-            <div class="page-title">
-                <h1>about</h1>
-            </div>
+            <h1 class="page-title">about</h1>
             <hr />
             <div class="horizontal-flex">
-                <div class="left-panel">
-                    <h4>
-                        Established in 2020, ParadiseInSelf is a tracking app
-                        that meets the needs of different types of projects as
-                        well as individual users.
-                    </h4>
-                    <p>
-                        This is a open-sourced projects tracker, manager
-                        application, which helps you add projects and then
-                        define tasks, time frames, ERD, wire frames, get
-                        notified for each task, and if it's completed or not,
-                        the user will then modify the task completion details,
-                        or add extension period for the specific task.
-                    </p>
+                <div class="desc">
+                    <div class="top-panel">
+                        <h4>
+                            Established in 2020, Project Tracker is a highly
+                            configurable artifact tracking app that meets the
+                            needs of different types of projects as well as
+                            individual users.
+                        </h4>
+                        <p>
+                            This is a open-sourced projects tracker, manager
+                            application, which helps you add projects and then
+                            define tasks, time frames, ERD, wire frames, get
+                            notified for each task, and if it's completed or
+                            not, the user will then modify the task completion
+                            details, or add extension period for the specific
+                            task.
+                        </p>
 
-                    <p>
-                        We aim to invigorate, agitate and illuminate.As
-                        effective time tracking helps also the resources, in
-                        order to keep track of their normal work time as well as
-                        the overtime they have put in.
-                    </p>
+                        <p>
+                            We aim to invigorate, agitate and illuminate.As
+                            effective time tracking helps also the resources, in
+                            order to keep track of their normal work time as
+                            well as the overtime they have put in.
+                        </p>
+                    </div>
+                    <div class="bottom-panel">
+                        <h6><p class="theater">SILO THEATRE TRUST</p></h6>
+                        <p>
+                            Jo Allison<br />Rick Carlyon (Chair)<br />Greg
+                            Fahey<br />Sharon Aroha Hawke<br />Rachel Paris<br />Sarah
+                            Peirse<br />Rosabel Tan<br />Peter Winder
+                        </p>
+                    </div>
                 </div>
 
-                <div class="right-panel">
+                <div class="season">
                     <div class="heading">
                         <h2>season archive</h2>
                         <br />
@@ -131,11 +138,15 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 .about-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     background-color: white;
     background-size: cover;
     top: 0;
@@ -143,37 +154,49 @@ export default {
     bottom: 0;
     left: 0;
 }
-.about-title {
+.horizontal-flex {
     display: flex;
-    align-items: center;
+}
+.paradise {
+    display: flex;
+    flex-dirextion: row;
     justify-content: center;
+    align-items: center;
     font-size: 20px;
     text-align: center;
     align-items: center;
     margin-top: 50px;
 }
 
-.about-title h3 {
+h3 {
     color: #111;
-    font-weight: bolder;
     font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 29px;
     letter-spacing: 1px;
+}
+
+p {
+    color: #111;
+    font-family: "Roboto", sans-serif;
     font-size: 35px;
+    font-weight: 700;
 }
-.about-content {
+
+.content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: nowrap;
-    margin-top: 50px;
+    margin-top: 30px;
+    width: 60%;
+    margin-left: 189px;
+    height: 182px;
 }
-.about-content div {
-    padding: 0 0 5px 11px;
-    margin: 0 0 10px;
-    width: 200px;
-    text-align: left;
+
+.content div {
+    margin: auto;
+    width: 170px;
 }
-.about-content h5 {
+h5 {
     color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -181,27 +204,9 @@ export default {
     letter-spacing: 2px;
     text-transform: uppercase;
     border-bottom: 2px solid #111;
-    letter-spacing: 3px;
-}
-.horizontal-flex {
-    display: flex;
-    margin-left: 102px;
-}
-.left-panel h4 {
-    color: #111;
-    font-family: "Roboto", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1px;
 }
 
-.left-panel p {
-    color: #111;
-    font-family: "Roboto", sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-}
-.detail {
+.para {
     font-size: 13px;
     color: #111;
     font-family: "Roboto", sans-serif;
@@ -219,10 +224,10 @@ export default {
 }
 
 .about h1 {
-    margin: 25px 72px 50px;
+    margin: 50px 45px 50px;
     font-size: 150px;
     font-family: "Roboto", sans-serif;
-    margin-left: 144px;
+    margin-left: 55px;
 }
 h1 {
     margin-left: 158px;
@@ -238,7 +243,7 @@ h1 {
     width: 110px;
     margin: 0 0 10px;
     border-top: 2px solid #111;
-    margin-left: 253px;
+    margin-left: 155px;
 }
 hr {
     border-color: #ccc;
@@ -246,12 +251,20 @@ hr {
     border-width: 1px 0;
     height: 0;
 }
-.left-panel {
+
+h4 {
+    color: #111;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.desc {
     margin-left: 149px;
     width: 242px;
 }
 
-.left-panel p {
+.desc p {
     color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -260,7 +273,33 @@ hr {
     margin-top: 25px;
 }
 
-.right-panel {
+ {
+    border-top: 2px #111 solid;
+    padding: 10px 0 0;
+    margin-top: 40px;
+}
+
+.bottom-panel {
+    border-top: 2px #111 solid;
+    padding: 10px 0 0;
+    margin-top: 40px;
+}
+
+.bottom-panel h6 {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 5px;
+    line-height: 1.5em;
+    font-weight: 900;
+    color: #111;
+}
+.bottom-panel .theater {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: #111;
+}
+.season {
     margin-left: 95px;
     width: 500px;
 }
@@ -278,13 +317,16 @@ hr {
     letter-spacing: 1px;
     width: 156px;
 }
+.page-title {
+    margin-left: 162px;
+}
+
 .solo {
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 38px;
     font-weight: 400;
     line-height: 1;
-    color: #111;
 }
 .creater {
     display: flex;
@@ -318,154 +360,32 @@ hr {
     height: 160px;
     object-fit: cover;
 }
-
-@media screen and (max-width: 320px) {
-    .about h1 {
-        font-size: 55px;
-        text-align: center;
-        margin-left: 70px;
-    }
-
+@media screen and (max-width: 768px) {
     .about-content {
         display: flex;
         flex-direction: column;
     }
 
-    .about hr {
-        width: 110px;
-        margin: 0 0 10px;
-        border-top: 2px solid #111;
-        margin-left: 94px;
-    }
-    .horizontal-flex {
-        display: flex;
-        flex-direction: column;
-        margin-left: 17px;
-    }
-
-    .left-panel {
-        margin-left: 20px;
-    }
-
-    .right-panel {
+    .about h1 {
+        font-size: 120px;
         text-align: center;
+        margin-left: 97px;
     }
-    .solo {
-        font-size: 15px;
+    .about hr {
         width: 200px;
-    }
-
-    .heading h2 {
-        font-size: 10px;
-    }
-    .creater {
-        display: flex;
-        flex-direction: column;
-    }
-    .creater2 {
-        margin-left: 5px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .about h1 {
-        font-size: 55px;
-        align-items: center;
-        margin-left: 70px;
-    }
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }
-    .creater {
-        display: flex;
-        flex-direction: column;
-    }
-    .about h1 {
-        font-size: 50px;
-        text-align: center;
-        margin-left: 84px;
-    }
-
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about hr {
-        width: 110px;
         margin: 0 0 10px;
         border-top: 2px solid #111;
-        margin-left: 66px;
+        margin-left: 85px;
     }
     .horizontal-flex {
         display: flex;
         flex-direction: column;
         margin-left: 35px;
     }
-
     .left-panel {
         margin-left: 30px;
+        width: 450px;
     }
-
-    .right-panel {
-    }
-
-    .solo {
-        font-size: 15px;
-    }
-    .creater1 {
-        margin-top: 5px;
-        margin-right: 48px;
-    }
-    .creater2 {
-        margin-left: 5px;
-    }
-}
-
-@media screen and (max-width: 506px) {
-    .about h1 {
-        font-size: 86px;
-        text-align: center;
-        align-items: center;
-        margin-left: 84px;
-    }
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }
-    .creater {
-        display: flex;
-    }
-    .about h1 {
-        font-size: 78px;
-        align-items: center;
-        margin-left: 84px;
-    }
-
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about hr {
-        width: 110px;
-        margin: 0 0 10px;
-        border-top: 2px solid #111;
-        margin-left: 165px;
-    }
-    .horizontal-flex {
-        display: flex;
-        flex-direction: column;
-        margin-left: 35px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-panel {
-        margin-left: 30px;
-    }
-
     .right-panel {
         text-align: center;
         margin-left: 22px;
@@ -480,9 +400,15 @@ hr {
         margin-left: 50px;
     }
 }
-
-@media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 1200px) {
-}
 </style>
+
+@media screen and (max-width: 768px) { .about h1 { font-size: 86px; text-align:
+center; align-items: center; margin-left: 84px; } .about-content { display:
+flex; flex-direction: column; } .creater { display: flex; } .about h1 {
+font-size: 78px; align-items: center; margin-left: 84px; } .about-content {
+display: flex; flex-direction: column; } .about hr { width: 110px; margin: 0 0
+10px; border-top: 2px solid #111; margin-left: 78px; } .horizontal-flex {
+display: flex; flex-direction: column; margin-left: 35px; justify-content:
+center; align-items: center; } .left-panel { margin-left: 3px; } .right-panel {
+text-align: center; margin-left: 22px; } .heading h2 { margin-left: 142px; }
+.solo { font-size: 15px; } .creater1 { margin-left: 50px; } }
