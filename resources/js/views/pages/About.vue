@@ -480,9 +480,4 @@ hr {
         margin-left: 50px;
     }
 }
-
-@media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 1200px) {
-}
 </style>
