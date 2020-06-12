@@ -17,9 +17,9 @@ class CreateExpensesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->timestamps();
             $table->integer('project_id');
             $table->integer('expenditure_type_id');
+            $table->timestamps();
         });
     }
 

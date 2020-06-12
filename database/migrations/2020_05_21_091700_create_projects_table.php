@@ -20,12 +20,13 @@ class CreateProjectsTable extends Migration
             $table->string('slug');
             $table->datetime('start_date');
             $table->datetime('end_date');
-            $table->integer('created_by');
             $table->string('budget');
             $table->string('budget_currency');
-            $table->timestamps();
             $table->integer('project_type_id');
+            $table->integer('created_by');
+            $table->integer('team_id')->nullable();
             $table->string('status');
+            $table->timestamps();
         });
     }
 

@@ -1,25 +1,30 @@
 <template>
-    <div class="container">
-      <SignUp></SignUp>
+    <div class="main-content">
     </div>
 </template>
 
 <script>
-    import UserManager from './../../../models/users/manager'
-    import SignUp from  './../../components/users/SignUp';
+    import {getLoggedInStatus} from './../../../models/users/manager'
+    import LocalStorage from './../../../models/storage';
 
     export default {
       name: 'Index',
-      components: {
-        SignUp
-      },
       beforeMount(){
-        UserManager();
-
+        LocalStorage.set('app_mode', 'projects_tracker')
       },
       data(){
         return{
-          isLoggedIn: false
+          user: {
+            isLoggedIn: false
+          },
+        }
+      },
+      methods: {
+        handleGoogleSignInSuccess(data){
+          console.log(data)
+        },
+        handleGoogleSignInError(error){
+
         }
       }
     }

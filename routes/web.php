@@ -43,14 +43,40 @@ Route::get('/{slug}/settings','ProjectShowController@settings');
 // Route::prefix('api') leh tes vitra vako sab routes ko agadi /api/ haldincha
 
 Route::prefix('api')->group(function (){
-    // User Routes
+    // API Documentation Page
+    Route::get('/', 'PagesController@api');
 
-    // Route::prefix('users') leh tes vitra vako sab routes ko agadi /users/ haldincha
+    // Auth endpoints
+    Route::prefix('auth')->group(function (){
+
+      Route::get('sign-in','AuthController@signIn');
+      Route::get('is-logged-in','AuthController@isLoggedIn');
+      Route::get('is-new-user/{email}','AuthController@isNewUser');
+
+    });
+
+
+    // User endpoints
 
     Route::prefix('users')->group(function (){
 
-      // So this route is actually /api/users/fetch-all-users
-      Route::get('fetch-all-users','UserController@index');
+      Route::get('fetch-all','UserController@index');
+
+    });
+
+    // Projects endpoints
+
+    Route::prefix('projects')->group(function (){
+
+      Route::get('fetch-all','ProjectController@fetchAll');
+
+      Route::get('fetch/{slug}','ProjectController@fetch');
+
+      Route::post('store','ProjectController@store');
+
+      Route::post('update/{slug}','ProjectController@update');
+
+      Route::delete('delete/{slug}','ProjectController@destroy');
 
     });
 });

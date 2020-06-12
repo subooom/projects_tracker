@@ -4,14 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class project extends Model
+class Project extends Model
 {
-      protected $fillable = [
-                "title",
-                "description",
-                "git_url",
-                "time"
-            ];
-            
-    protected $primaryKey = 'project_id';
+    public function user() {
+        $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function projectType() {
+        $this->belongsTo(ProjectType::class, 'project_type_id');
+    }
+
+    public function team() {
+        $this->belongsTo(Team::class, 'team_id');
+    }
 }

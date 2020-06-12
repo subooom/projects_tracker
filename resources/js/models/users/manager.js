@@ -1,7 +1,9 @@
-export default function(){
-  // const config = require('config');
+  const axios = require('axios');
 
+  const getLoggedInStatus = _ => axios.get('/api/auth/is-logged-in').then( resp =>  resp.data['is-logged-in']).catch(error => error);
 
-  // console.log(config+ "user manager")
-  console.log("user manager")
-}
+  const isNewUser  = email => axios.get('/api/auth/is-new-user/'+email).then( resp =>  resp.data['is-new-user']).catch(error => error);
+
+  const UserManager = {getLoggedInStatus, isNewUser}
+
+  export default UserManager

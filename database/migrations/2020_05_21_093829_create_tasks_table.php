@@ -18,13 +18,13 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->text('work');
-            $table->timestamps();
-            $table->integer('project_id');
-            $table->integer('created_by');
             $table->string('slug');
             $table->integer('hours_needed');
-            $table->string('extensions');
-            $table->string('status');
+            $table->string('extensions')->nullable();
+            $table->string('task_status_id');
+            $table->integer('project_id');
+            $table->integer('created_by');
+            $table->timestamps();
         });
     }
 

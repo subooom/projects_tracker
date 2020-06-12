@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="/css/bootstrap-undoer.css">
   <link rel="stylesheet" href="/css/all.css">
+  <link rel="preload" href="/img/bg.jpg" as="image">
 </head>
 <body>
   <div id="app"></div>

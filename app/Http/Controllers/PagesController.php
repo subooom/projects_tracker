@@ -14,13 +14,56 @@ class PagesController extends Controller
     public function index()
     {
       $name ='index';
-      return view('pages.index')->with('name',$name);
+      return view('pages.index')->with('name', $name);
     }
 
-    public function about()
+    public function api()
     {
-      $name ='about';
-      return view('pages.about')->with('name',$name);
+      $data = [
+        'header_tags' => [
+          ['URL','Uniform Resource Locator'],
+          ['Method','Method'],
+          ['Params','Parameters'],
+          ['Desc','Description']
+        ],
+        "data" => [
+          "auth" => [
+            "name" => 'Authentication',
+            "api" => [
+              [
+                "URL" => '<code>/auth/api/sign-in</code>*',
+                "Method" => 'POST',
+                "Parameters"=> '<code>username, password</code>',
+                "Description" => 'Signs in the user.'
+              ],
+              [
+                "URL" => '<code>/api/auth/is-logged-in</code>',
+                "Method" => 'GET',
+                "Parameters"=> 'No Params.',
+                "Description" => 'Returns <code>true</code> if any user is logged in.'
+              ],
+              [
+                "URL" => '<code>/api/auth/is-new-user/{email}</code>',
+                "Method" => 'GET',
+                "Parameters"=> '<code>email</code>',
+                "Description" => 'Returns <code>true</code> if the user is new.'
+              ],
+            ]
+          ],
+          "users" => [
+            "name" => 'Users',
+            "api" => [
+              [
+                "URL" => '<code>/api/users/fetch-all</code>',
+                "Method" => 'GET',
+                "Parameters"=> 'No Params.',
+                "Description" => 'Returns a <code>json</code> with all users from the database.'
+              ]
+            ]
+          ],
+        ],
+      ];
+      return view('api')->with('data', $data);
     }
 
     public function project()
@@ -29,7 +72,7 @@ class PagesController extends Controller
       return view('pages.project')->with('name',$name);
     }
 
-    
+
     public function task()
     {
       $name ='task';

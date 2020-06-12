@@ -15,7 +15,12 @@
 </template>
 
 <script>
+    import LocalStorage from './../../models/storage';
+
     export default {
-      name: 'Home'
+      name: 'Home',
+      beforeMount(){
+        LocalStorage.set('app_mode', 'paradiseinself')
+      }
     }
 </script>

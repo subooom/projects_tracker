@@ -18,9 +18,9 @@ class CreateProjectTypeTable extends Migration
             $table->string('name')->unique();
             $table->text('description');
             $table->string('slug');
-            $table->timestamps();
             $table->integer('created_by');
             $table->boolean('enabled');
+            $table->timestamps();
         });
     }
 

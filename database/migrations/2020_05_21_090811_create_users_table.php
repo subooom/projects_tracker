@@ -18,15 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->boolean('enabled');
+            $table->boolean('enabled')->nullable();
             $table->string('profile_picture');
-            $table->string('quote');
-            $table->string('emoji');
-            $table->string('website_url');
-            $table->integer('team_id');
-            $table->integer('team_role_id');
-            $table->timestamps();
+            $table->string('quote')->nullable();
+            $table->string('emoji')->nullable();
+            $table->string('website_url')->nullable();
             $table->integer('role_id');
+            $table->timestamps();
 
         });
     }

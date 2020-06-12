@@ -18,8 +18,9 @@ class CreateExpenditureTypeTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('amount');
-            $table->timestamps();
             $table->integer('project_id');
+            $table->integer('created_by');
+            $table->timestamps();
         });
     }
 

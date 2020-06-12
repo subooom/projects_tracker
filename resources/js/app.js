@@ -8,9 +8,12 @@ require("./bootstrap");
 import App from "./App.vue";
 import router from "./routes/routes.js";
 import VueRouter from "vue-router";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faSave } from "@fortawesome/free-solid-svg-icons";
+import { faKey } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -19,6 +22,9 @@ library.add(faEnvelope);
 library.add(faSave);
 library.add(faGoogle);
 library.add(faFacebook);
+library.add(faUser);
+library.add(faKey);
+
 
 window.Vue = require("vue");
 

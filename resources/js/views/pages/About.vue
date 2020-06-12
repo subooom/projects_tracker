@@ -1,6 +1,7 @@
 <template>
     <div class="section">
-        <div class="paradise">
+      <div class="header">
+        <div class="header-title">
             <h3>
                 ParadiseInSelf
                 <br />
@@ -8,8 +9,8 @@
             </h3>
         </div>
 
-        <div class="content">
-            <div style="width:170px">
+        <div class="header-content">
+            <div>
                 <h5>UPU</h5>
                 <p class="para" style="min-height: 26px">WE ARE OCEANIA</p>
                 <p class="date">
@@ -18,7 +19,7 @@
                 </p>
             </div>
 
-            <div style="width:170px">
+            <div>
                 <h5>The Writer</h5>
                 <p class="para" style="min-height: 26px">
                     A Ferocious call to arms
@@ -29,7 +30,7 @@
                 </p>
             </div>
 
-            <div style="width:170px">
+            <div>
                 <h5>Every Brilliant Thing</h5>
                 <p class="para" style="min-height: 26px">
                     What would you put on your list?
@@ -40,7 +41,7 @@
                 </p>
             </div>
 
-            <div style="width:170px">
+            <div>
                 <h5>BREAK BREAD</h5>
                 <p class="para" style="min-height: 26px;">
                     Tell us who you are. Tell us where you come from.
@@ -51,9 +52,9 @@
                 </p>
             </div>
         </div>
+      </div>
         <div class="about">
             <h1 class="page-title">about</h1>
-            <hr />
             <div class="horizontal-flex">
                 <div class="desc">
                     <div class="top-panel">
@@ -130,13 +131,19 @@
 </template>
 
 <script>
-export default {
-    name: "About"
-};
+    import LocalStorage from './../../models/storage';
+
+    export default {
+        name: "About",
+        beforeMount(){
+          LocalStorage.set('app_mode', 'paradiseinself')
+        }
+    };
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 
 .section {
     display: flex;
@@ -155,15 +162,16 @@ export default {
 }
 .horizontal-flex {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.paradise {
+.header{
+    width: 100%;
     display: flex;
-    flex-dirextion: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    text-align: center;
-    align-items: center;
     margin-top: 50px;
 }
 
@@ -182,17 +190,22 @@ p {
     font-weight: 700;
 }
 
-.content {
+.header-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 60%;
-    margin-left: 55px;
-    height: 182px;
+    margin-left: 140px;
 }
 
-.content div {
+.header-content div {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 182px;
+    width:170px
 }
 h5 {
     color: #111;
@@ -200,35 +213,37 @@ h5 {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
+    padding: 5px 0;
     text-transform: uppercase;
     border-bottom: 2px solid #111;
 }
 
 .para {
-    font-size: 13px;
+    font-size: 11px;
+    line-height: 1;
     color: #111;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    letter-spacing: 1.01px;
+    letter-spacing: 0.4px;
 }
 
 .date {
-    font-size: 13px;
+    line-height: 1;
+    font-size: 11px;
     color: #111;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 1.01px;
+    letter-spacing: .4px;
 }
 
 .about {
     width: 100%;
 }
 .about h1 {
-    margin: 50px 45px 50px;
+    margin: 30px 45px 50px 180px;
     font-size: 150px;
     font-family: "Roboto", sans-serif;
-    margin-left: 160px;
 }
 h1 {
     margin-left: 158px;
@@ -244,7 +259,7 @@ h1 {
     width: 110px;
     margin: 0 0 10px;
     border-top: 2px solid #111;
-    margin-left: 267px;
+    margin-left: 295px;
 }
 hr {
     border-color: #ccc;
@@ -259,9 +274,11 @@ h4 {
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
+    border-top: 2px solid #111;
+    padding-top: 5px;
 }
 .desc {
-    margin-left: 265px;
+    margin-left: 295px;
     width: 263px;
 }
 
@@ -272,12 +289,6 @@ h4 {
     font-weight: 500;
     letter-spacing: 1px;
     margin-top: 25px;
-}
-
- {
-    border-top: 2px #111 solid;
-    padding: 10px 0 0;
-    margin-top: 40px;
 }
 
 .bottom-panel {
@@ -302,7 +313,7 @@ h4 {
 }
 .season {
     margin-left: 95px;
-    width: 500px;
+    max-width: 500px;
 }
 .heading h2 {
     font-family: "Roboto", sans-serif;
@@ -354,5 +365,35 @@ h4 {
     text-transform: uppercase;
     color: #111;
     margin-top: 8px;
+}
+@media (min-width: 576px) {
+
+  .desc{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .desc{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .desc{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1155px) {
+  .header-content{
+    margin-left: 0;
+  }
+  .desc{
+    margin-left: 100px;
+  }
+
 }
 </style>

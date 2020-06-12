@@ -3,7 +3,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\User as UserResource;
 
 class UserController extends Controller
@@ -23,17 +22,7 @@ class UserController extends Controller
         ]
       ];
 
-      return UserResource::collection(User::paginate()) ->additional($headers);
-    }
-
-    /**
-     * IsLoggedIn for checking if the user is logged in or not.
-     *
-     * @return boolean
-     */
-
-    public function isLoggedIn(){
-      return new UserResource(Auth::check());
+      return UserResource::collection(User::paginate())->additional($headers);
     }
 
     /**

@@ -1,7 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\project;
+use App\Project;
+use App\Http\Resources\Project as ProjectResource;
 
 
 class ProjectController extends Controller
@@ -12,12 +13,19 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index()
+    public function fetchAll()
     {
-
         $projects=Project::latest()->paginate(5);
-        return view('pages.projects.index',compact('projects'))
-        ->with('i',(request()->input('page',1)-1)*5);
+
+        $headers = [
+            'headers' => [
+                'method' => 'GET',
+                'message' => 'All projects fetched!',
+                'code' => 200
+            ]
+        ];
+
+        return ProjectResource::collection($projects)->additional($headers);
     }
     /**
      * Show the form for creating a new resource.
@@ -25,15 +33,28 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-  
 
-    public function create()
+
+    public function fetch($slug)
     {
-        return view('pages.projects.create');
+        $project = Project::query()
+          ->where('slug', '=', $slug)
+          ->get();
 
+        $headers = [
+            'headers' => [
+                'method' => 'GET',
+                'message' => 'project #'.$project[0]->id.' fetched!',
+                'code' => 200
+            ]
+        ];
+
+        $projRes = new ProjectResource($project);
+
+        return $projRes->additional($headers);
     }
 
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,22 +64,22 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-
+        dd($request);
         $request->validate([
             'title'=> 'required',
             'description'=>'required',
         ]);
 
-        $project= new \App\project;
+        $project = new \App\project;
 
         $project->slug = str_slug($request->input('title'));
 
         $project->title = $request->input('title');
 
         $project->description = $request->input('description');
-        
+
         $project->git_url = $request->input('git_url');
-        
+
         $project->timeframe = $request->input('timeframe');
 
         $project->save();
@@ -66,7 +87,7 @@ class ProjectController extends Controller
         return redirect('/')
           ->with('success', 'Information has been added');
         }
-  
+
     /**
      * Show the form for editing the specified resource.
      *
