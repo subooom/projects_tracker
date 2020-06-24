@@ -1,0 +1,12 @@
+extend type Query {
+    taskStatus(id: ID @eq): TaskStatus @find
+    taskStatuses: [TaskStatus!]! @paginate(defaultCount: 10)
+}
+
+type TaskStatus {
+    id: ID!
+    name: String!
+    description: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

@@ -1,0 +1,14 @@
+extend type Query {
+    expenditureType(id: ID @eq): ExpenditureType @find
+    expenditureTypes: [ExpenditureType!]! @paginate(defaultCount: 10)
+}
+
+type ExpenditureType {
+    id: ID!
+    name: String!
+    description: String!
+    project: Project! @belongsTo
+    user: User! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}

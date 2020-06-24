@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
+    protected $guarded = [];
+
     public function user() {
-        $this->belongsTo(User::class, 'created_by');
+        return $this->belongsTo(User::class, 'created_by', 'id');
     }
 
-    public function users() {
-        $this->hasMany(User::class, 'team_id');
-    }
+    // public function users() {
+    //     return $this->hasMany(User::class, 'user_team_roles');
+    // }
 }

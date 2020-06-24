@@ -1,0 +1,22 @@
+extend type Query {
+    project(id: ID @eq): Project @find
+    projects: [Project!]! @paginate(defaultCount: 10)
+
+}
+
+type Project {
+    id: ID!
+    title: String!
+    description: String!
+    slug: String!
+    start_date: String!
+    end_date: String!
+    budget: String!
+    budget_currency: String!
+    creator: User! @belongsTo
+    project_type: ProjectType! @belongsTo
+    expenses: [Expense] @hasMany
+    team: Team! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}

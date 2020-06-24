@@ -1,0 +1,15 @@
+extend type Query {
+    permission(id: ID @eq): Permission @find
+    permissions: [Permission!]! @paginate(defaultCount: 10)
+}
+
+type Permission {
+    id: ID!
+    name: String!
+    slug: String!
+    roles: String!
+    description: String!
+    roles: [UserRole] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}

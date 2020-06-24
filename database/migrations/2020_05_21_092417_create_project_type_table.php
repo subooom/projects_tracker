@@ -14,11 +14,11 @@ class CreateProjectTypeTable extends Migration
     public function up()
     {
         Schema::create('project_type', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->text('description');
             $table->string('slug');
-            $table->integer('created_by');
+            $table->unsignedBigInteger('created_by');
             $table->boolean('enabled');
             $table->timestamps();
         });

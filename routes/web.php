@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Our main route for the vue app, if you go to vue.blade.php you will see a div with id of #app, vue works like react.
-Route::get('/', function(){
-  return view('paradiseinself');
-});
+// Route::get('/', function(){
+//     return view('paradiseinself');
+//   });
+  Route::get('/', 'PagesController@index');
 
 
 // We will modify the following routes bistari, ahile chai /old-app ma gais bhaney puranai app aaucha

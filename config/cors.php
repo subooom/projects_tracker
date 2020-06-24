@@ -15,11 +15,12 @@ return [
     |
     */
 
-    'paths' => ['api/*'],
+    'paths' => ['api/*', 'graphql'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' =>  env('APP_STATE') ==='development' ?
+        ['*'] : explode(',', env('ALLOWED_CORS_ORIGINS', [])),
 
     'allowed_origins_patterns' => [],
 

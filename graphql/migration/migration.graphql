@@ -1,0 +1,10 @@
+extend type Query {
+    migration(id: ID @eq): Migration @find
+    migrations: [Migration!]! @paginate(defaultCount: 10)
+}
+
+type Migration {
+    id: ID!
+    migration: String!
+    batch: String!
+}

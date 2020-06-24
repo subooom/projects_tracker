@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Expense extends Model
 {
     public function project(){
-        $this->belongsTo(Project::class, 'project_id');
+        return $this->belongsTo(Project::class, 'project_id', 'id');
     }
 
-    public function expenditureType(){
-        $this->belongsTo(ExpenditureType::class, 'expenditure_type_id');
+    public function expenditure_type(){
+        return $this->belongsTo(ExpenditureType::class, 'expenditure_type_id','id');
     }
 
-    public function user(){
-        $this->belongsTo(User::class, 'created_at');
+    public function creator(){
+        return $this->belongsTo(User::class, 'created_by', 'id');
     }
 }

@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     public function project() {
-        $this->belongsTo(Project::class, 'project_id');
+        return $this->belongsTo(Project::class, 'project_id');
     }
 
     public function user() {
-        $this->belongsTo(User::class, 'created_by');
+        return $this->belongsTo(User::class, 'created_by', 'id');
     }
 
     public function taskStatus() {
-        $this->belongsTo(TaskStatus::class, 'task_status_id');
+        return $this->belongsTo(TaskStatus::class, 'task_status_id');
     }
 }

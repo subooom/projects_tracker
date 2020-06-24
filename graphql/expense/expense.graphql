@@ -1,0 +1,17 @@
+extend type Query {
+    expense(id: ID @eq): Expense @find
+    expenses: [Expense!]! @paginate(defaultCount: 10)
+}
+
+type Expense {
+    id: ID!
+    name: String!
+    amount: Int!
+    description: String!
+    project: Project! @belongsTo
+    expenditure_type: ExpenditureType! @belongsTo
+    start_date: String!
+    creator: User! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}

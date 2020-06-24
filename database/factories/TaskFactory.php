@@ -3,11 +3,12 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Task;
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 $factory->define(Task::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'name' => Str::ucfirst($faker->name),
         'description' => $faker->text,
         'work' => $faker->sentence(),
         'slug' => $faker->slug,

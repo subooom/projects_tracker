@@ -14,12 +14,12 @@ class CreateExpenditureTypeTable extends Migration
     public function up()
     {
         Schema::create('expenditure_type', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
             $table->integer('amount');
-            $table->integer('project_id');
-            $table->integer('created_by');
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('created_by');
             $table->timestamps();
         });
     }

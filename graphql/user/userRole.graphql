@@ -1,0 +1,14 @@
+extend type Query {
+    role(id: ID @eq): UserRole @find
+    roles: [UserRole!]! @paginate(defaultCount: 10)
+}
+
+type UserRole {
+    id: ID!
+    name: String!
+    description: String!
+    permissions: [Permission] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+    users: [User] @hasMany
+}

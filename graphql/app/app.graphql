@@ -1,0 +1,17 @@
+extend type Query {
+    app(id: ID @eq): App @find
+    apps: [App!]! @paginate(defaultCount: 10)
+}
+
+type App {
+    id: ID!
+    title: String!
+    slug: String!
+    background: String!
+    color: String!
+    overlayBackground: String!
+    url: String!
+    buttons: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

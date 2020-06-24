@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\User;
+use Illuminate\Support\Str;
 use App\UserRole;
 use Faker\Generator as Faker;
 
@@ -19,8 +20,9 @@ use Faker\Generator as Faker;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'name' => Str::ucfirst($faker->name),
         'username' => $faker->userName,
+        'password' => $faker->password,
         'email' => $faker->unique()->safeEmail,
         'enabled' => 1,
         'profile_picture' => $faker->imageUrl($width = 200, $height = 200),

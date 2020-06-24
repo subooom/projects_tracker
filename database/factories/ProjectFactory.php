@@ -3,11 +3,12 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Project;
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 $factory->define(Project::class, function (Faker $faker) {
     return [
-        'title' => $title = $faker->unique()->word,
+        'title' => $title = Str::ucfirst($faker->unique()->word) . " " . Str::ucfirst($faker->unique()->word),
         'description' => $faker->text,
         'slug' => str_slug($title),
         'start_date' => now(),

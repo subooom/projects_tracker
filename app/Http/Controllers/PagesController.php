@@ -13,8 +13,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-      $name ='index';
-      return view('pages.index')->with('name', $name);
+        $name ='index';
+        return view('pages.index')->with('name', $name);
     }
 
     public function api()

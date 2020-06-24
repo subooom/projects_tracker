@@ -14,7 +14,8 @@ class AddCreatedByToExpensesTable extends Migration
     public function up()
     {
         Schema::table('expenses', function (Blueprint $table) {
-            $table->integer('created_by');
+            $table->unsignedBigInteger('created_by');
+
         });
     }
 
@@ -26,7 +27,7 @@ class AddCreatedByToExpensesTable extends Migration
     public function down()
     {
         Schema::table('expenses', function (Blueprint $table) {
-            $table->dropColumn('created_by');
+            $table->dropForeign('created_by');
         });
     }
 }

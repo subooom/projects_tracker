@@ -14,9 +14,9 @@ class CreateUserTeamRolesTable extends Migration
     public function up()
     {
         Schema::create('user_team_roles', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('team_id');
-            $table->integer('team_role_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('team_id');
+            $table->unsignedBigInteger('team_role_id');
             $table->boolean('approved');
             $table->timestamps();
         });

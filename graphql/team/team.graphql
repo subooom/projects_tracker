@@ -1,0 +1,12 @@
+extend type Query {
+    team(id: ID @eq): Team @find
+    teams: [Team!]! @paginate(defaultCount: 10)
+}
+type Team {
+    id: ID!
+    name: String!
+    description: String!
+    creator: User! @belongsTo
+    created_at: DateTime!
+    updated_at: DateTime!
+}

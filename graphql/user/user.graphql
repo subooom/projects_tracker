@@ -1,0 +1,25 @@
+extend type Query {
+    user(id: ID @eq): User @find
+    me: User @auth
+    users: [User!]! @paginate(defaultCount: 10)
+}
+
+type User {
+    id: ID!
+    name: String!
+    username: String!
+    email: Email!
+    enabled: Int!
+    profile_picture: String!
+    quote: String!
+    emoji: String!
+    website_url: String!
+    role: UserRole! @belongsTo
+    expenses: [Expense] @hasMany
+    projects: [Project] @hasMany
+    team: Team! @belongsTo
+    my_teams: Team! @hasMany
+    password: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}

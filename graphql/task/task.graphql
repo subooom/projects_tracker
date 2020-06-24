@@ -1,0 +1,19 @@
+extend type Query {
+    task(id: ID @eq): Task @find
+    tasks: [Task!]! @paginate(defaultCount: 10)
+}
+
+type Task {
+    id: ID!
+    name: String!
+    description: String!
+    slug: String!
+    work: String!
+    hours_needed: Int!
+    extensions: String
+    task_status_id: String!
+    project_id: String!
+    created_by: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
