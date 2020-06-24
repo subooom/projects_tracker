@@ -1,18 +1,15 @@
 <template>
-    <div class="section">
-      <div class="header">
-        <div class="header-title">
+    <div class="about-section">
+        <div class="about-title">
             <h3>
-                ParadiseInSelf
-                <br />
+                ParadiseInSelf<br />
                 Season — 2020
             </h3>
         </div>
-
-        <div class="header-content">
+        <div class="about-content">
             <div>
                 <h5>UPU</h5>
-                <p class="para" style="min-height: 26px">WE ARE OCEANIA</p>
+                <p class="detail" style="min-height: 26px">WE ARE OCEANIA</p>
                 <p class="date">
                     5.mar— <br />
                     15.mar.20
@@ -21,7 +18,7 @@
 
             <div>
                 <h5>The Writer</h5>
-                <p class="para" style="min-height: 26px">
+                <p class="detail" style="min-height: 26px">
                     A Ferocious call to arms
                 </p>
                 <p class="date">
@@ -31,9 +28,13 @@
             </div>
 
             <div>
-                <h5>Every Brilliant Thing</h5>
-                <p class="para" style="min-height: 26px">
-                    What would you put on your list?
+                <h5>
+                    Every Brilliant <br />
+                    Thing
+                </h5>
+                <p class="detail" style="min-height: 26px">
+                    What would you put on <br />
+                    your list?
                 </p>
                 <p class="date">
                     25.aug— <br />
@@ -43,8 +44,9 @@
 
             <div>
                 <h5>BREAK BREAD</h5>
-                <p class="para" style="min-height: 26px;">
-                    Tell us who you are. Tell us where you come from.
+                <p class="detail" style="min-height: 26px;">
+                    Tell us who you are. Tell<br />
+                    us where you come from.
                 </p>
                 <p class="date">
                     5.nov— <br />
@@ -54,39 +56,35 @@
         </div>
       </div>
         <div class="about">
-            <h1 class="page-title">about</h1>
+            <div class="page-title">
+                <h1>about</h1>
+            </div>
+            <hr />
             <div class="horizontal-flex">
-                <div class="desc">
-                    <div class="top-panel">
-                        <h4>
-                            Established in 1997, Silo Theatre is one of the
-                            leading producers of contemporary theatre in
-                            Aotearoa.
-                        </h4>
-                        <p>
-                            We curate an annual season of work in direct
-                            response to the world around us, constantly evolving
-                            in response to our cultural climate. We seek to push
-                            storytelling, artists and audiences forward, both in
-                            our programming and company culture.
-                        </p>
+                <div class="left-panel">
+                    <h4>
+                        Established in 2020, ParadiseInSelf is a tracking app
+                        that meets the needs of different types of projects as
+                        well as individual users.
+                    </h4>
+                    <p>
+                        This is a open-sourced projects tracker, manager
+                        application, which helps you add projects and then
+                        define tasks, time frames, ERD, wire frames, get
+                        notified for each task, and if it's completed or not,
+                        the user will then modify the task completion details,
+                        or add extension period for the specific task.
+                    </p>
 
-                        <p>
-                            We aim to invigorate, agitate and illuminate. We
-                            believe in theatre as a powerful agent for change.
-                        </p>
-                    </div>
-                    <div class="bottom-panel">
-                        <h6><p class="theater">SILO THEATRE TRUST</p></h6>
-                        <p>
-                            Jo Allison<br />Rick Carlyon (Chair)<br />Greg
-                            Fahey<br />Sharon Aroha Hawke<br />Rachel Paris<br />Sarah
-                            Peirse<br />Rosabel Tan<br />Peter Winder
-                        </p>
-                    </div>
+                    <p>
+                        We aim to invigorate, agitate and illuminate.As
+                        effective time tracking helps also the resources, in
+                        order to keep track of their normal work time as well as
+                        the overtime they have put in.
+                    </p>
                 </div>
 
-                <div class="season">
+                <div class="right-panel">
                     <div class="heading">
                         <h2>season archive</h2>
                         <br />
@@ -95,32 +93,28 @@
                     <div class="creater">
                         <div class="creater1">
                             <img
-                                src="/img/1.jpg"
+                                src="/img/sus.png"
                                 alt="sushma"
-                                width="110"
-                                height="160"
-                                class=" loaded"
+                                class=" image"
                             />
                             <p class="name">
                                 Sushma Chaudhary
                             </p>
                             <p class="job">
-                                Web Developer
+                                Founder
                             </p>
                         </div>
                         <div class="creater2">
                             <img
-                                src="/img/2.jpg"
+                                src="/img/hehe.jpg"
                                 alt="Subham"
-                                width="110"
-                                height="160"
                                 class=" image"
                             />
                             <p class="name">
                                 Subham Kharel
                             </p>
                             <p class="job">
-                                Web Developer
+                                Founder
                             </p>
                         </div>
                     </div>
@@ -143,16 +137,11 @@
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
-
-.section {
+.about-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
     background-color: white;
     background-size: cover;
     top: 0;
@@ -160,54 +149,35 @@
     bottom: 0;
     left: 0;
 }
-.horizontal-flex {
+.about-title {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 20px;
     margin-top: 50px;
 }
 
-h3 {
+.about-title h3 {
     color: #111;
+    font-weight: bolder;
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 29px;
     letter-spacing: 1px;
-}
-
-p {
-    color: #111;
-    font-family: "Roboto", sans-serif;
     font-size: 35px;
-    font-weight: 700;
 }
-
-.header-content {
+.about-content {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 20px;
-    width: 60%;
-    margin-left: 140px;
-}
-
-.header-content div {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 182px;
-    width:170px
+    flex-wrap: nowrap;
+    margin-top: 50px;
 }
-h5 {
+.about-content div {
+    padding: 0 0 5px 11px;
+    margin: 0 0 10px;
+    width: 200px;
+    text-align: left;
+}
+.about-content h5 {
     color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -216,11 +186,28 @@ h5 {
     padding: 5px 0;
     text-transform: uppercase;
     border-bottom: 2px solid #111;
+    letter-spacing: 3px;
+}
+.horizontal-flex {
+    display: flex;
+    margin-left: 102px;
+}
+.left-panel h4 {
+    color: #111;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.para {
-    font-size: 11px;
-    line-height: 1;
+.left-panel p {
+    color: #111;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+}
+.detail {
+    font-size: 13px;
     color: #111;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -237,13 +224,11 @@ h5 {
     letter-spacing: .4px;
 }
 
-.about {
-    width: 100%;
-}
 .about h1 {
-    margin: 30px 45px 50px 180px;
+    margin: 25px 72px 50px;
     font-size: 150px;
     font-family: "Roboto", sans-serif;
+    margin-left: 144px;
 }
 h1 {
     margin-left: 158px;
@@ -259,7 +244,7 @@ h1 {
     width: 110px;
     margin: 0 0 10px;
     border-top: 2px solid #111;
-    margin-left: 295px;
+    margin-left: 253px;
 }
 hr {
     border-color: #ccc;
@@ -267,22 +252,12 @@ hr {
     border-width: 1px 0;
     height: 0;
 }
-
-h4 {
-    color: #111;
-    font-family: "Roboto", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-top: 2px solid #111;
-    padding-top: 5px;
-}
-.desc {
-    margin-left: 295px;
-    width: 263px;
+.left-panel {
+    margin-left: 149px;
+    width: 242px;
 }
 
-.desc p {
+.left-panel p {
     color: #111;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -291,27 +266,7 @@ h4 {
     margin-top: 25px;
 }
 
-.bottom-panel {
-    border-top: 2px #111 solid;
-    padding: 10px 0 0;
-    margin-top: 40px;
-}
-
-.bottom-panel h6 {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 5px;
-    line-height: 1.5em;
-    font-weight: 900;
-    color: #111;
-}
-.bottom-panel .theater {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    color: #111;
-}
-.season {
+.right-panel {
     margin-left: 95px;
     max-width: 500px;
 }
@@ -329,16 +284,13 @@ h4 {
     letter-spacing: 1px;
     width: 156px;
 }
-.page-title {
-    margin-left: 162px;
-}
-
 .solo {
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 38px;
     font-weight: 400;
     line-height: 1;
+    color: #111;
 }
 .creater {
     display: flex;
@@ -366,34 +318,172 @@ h4 {
     color: #111;
     margin-top: 8px;
 }
-@media (min-width: 576px) {
 
-  .desc{
-    margin-left: 0;
-  }
+.image {
+    width: 110px;
+    height: 160px;
+    object-fit: cover;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 320px) {
+    .about h1 {
+        font-size: 55px;
+        text-align: center;
+        margin-left: 70px;
+    }
 
-  .desc{
-    margin-left: 0;
-  }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about hr {
+        width: 110px;
+        margin: 0 0 10px;
+        border-top: 2px solid #111;
+        margin-left: 94px;
+    }
+    .horizontal-flex {
+        display: flex;
+        flex-direction: column;
+        margin-left: 17px;
+    }
+
+    .left-panel {
+        margin-left: 20px;
+    }
+
+    .right-panel {
+        text-align: center;
+    }
+    .solo {
+        font-size: 15px;
+        width: 200px;
+    }
+
+    .heading h2 {
+        font-size: 10px;
+    }
+    .creater {
+        display: flex;
+        flex-direction: column;
+    }
+    .creater2 {
+        margin-left: 5px;
+    }
 }
 
-@media (min-width: 992px) {
+@media screen and (max-width: 360px) {
+    .about h1 {
+        font-size: 55px;
+        align-items: center;
+        margin-left: 70px;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .creater {
+        display: flex;
+        flex-direction: column;
+    }
+    .about h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-left: 84px;
+    }
 
-  .desc{
-    margin-left: 0;
-  }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about hr {
+        width: 110px;
+        margin: 0 0 10px;
+        border-top: 2px solid #111;
+        margin-left: 66px;
+    }
+    .horizontal-flex {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+    }
+
+    .left-panel {
+        margin-left: 30px;
+    }
+
+    .right-panel {
+    }
+
+    .solo {
+        font-size: 15px;
+    }
+    .creater1 {
+        margin-top: 5px;
+        margin-right: 48px;
+    }
+    .creater2 {
+        margin-left: 5px;
+    }
 }
 
-@media (min-width: 1155px) {
-  .header-content{
-    margin-left: 0;
-  }
-  .desc{
-    margin-left: 100px;
-  }
+@media screen and (max-width: 506px) {
+    .about h1 {
+        font-size: 86px;
+        text-align: center;
+        align-items: center;
+        margin-left: 84px;
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .creater {
+        display: flex;
+    }
+    .about h1 {
+        font-size: 78px;
+        align-items: center;
+        margin-left: 84px;
+    }
 
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about hr {
+        width: 110px;
+        margin: 0 0 10px;
+        border-top: 2px solid #111;
+        margin-left: 165px;
+    }
+    .horizontal-flex {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-panel {
+        margin-left: 30px;
+    }
+
+    .right-panel {
+        text-align: center;
+        margin-left: 22px;
+    }
+    .heading h2 {
+        margin-left: 142px;
+    }
+    .solo {
+        font-size: 15px;
+    }
+    .creater1 {
+        margin-left: 50px;
+    }
 }
 </style>
