@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,24 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'PagesController@index');
-// We will modify the following routes bistari, ahile chai /old-app ma gais bhaney puranai app aaucha
-Route::get('/old-app','ProjectController@index');
-Route::get('/about','PagesController@about');
-Route::get('/create-project','ProjectController@create');
-Route::post('/store','ProjectController@store');
-Route::get('/edit','ProjectController@edit');
-Route::post('/delete/{id}','ProjectController@destroy');
-Route::get('/{slug}/details','ProjectShowController@details');
-Route::get('/{slug}/task','ProjectShowController@task');
-Route::get('/{slug}/erd','ProjectShowController@erd');
-Route::get('/{slug}/progress','ProjectShowController@progress');
-Route::get('/{slug}/settings','ProjectShowController@settings');
-
 // REST API
 
 Route::prefix('api')->group(function (){
 
+    Route::get('/', 'PagesController@api');
     Route::get('get-cross-ref-token', function(){
         return response()->json(csrf_token());
     });
@@ -45,7 +33,6 @@ Route::prefix('api')->group(function (){
       Route::get('is-logged-in','AuthController@isLoggedIn');
       Route::get('is-new-user/{email}','AuthController@isNewUser');
     });
-
 
     // User endpoints
 
