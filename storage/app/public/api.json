@@ -25,6 +25,328 @@
                 "Description": "Returns <code>true<\/code> if the user is new."
             }]
         },
+
+        
+        "project": {
+            "name": "Projects",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>title, description,slug,start_date,end_date,budget,budget_currency,project_type_id,team_id<\/code>",
+                "Description": "Creates a new project."
+            },
+            {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>title, description,slug,start_date,end_date,budget,budget_currency,project_type_id,team_id<\/code>",
+                "Description": "Edits a project."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>title, description,slug,start_date,end_date,budget,budget_currency,project_type_id,team_id<\/code>",
+                "Description": "Updates a project."
+            },
+             {
+                "URL": "<code>\/project\/delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>title, description,slug,start_date,end_date,budget,budget_currency,project_type_id,team_id<\/code>",
+                "Description": "Deletes a project."
+        
+            }]
+        },
+
+        "project_type": {
+            "name": "Project_Type",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,slug,created_by<\/code>",
+                "Description": "create a new project_type."
+            }, 
+            {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,slug,created_by<\/code>",
+                "Description": "Edits a project_type."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,slug,created_by<\/code>",
+                "Description": "Updates a project_type."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,slug,created_by<\/code>",
+                "Description": "Deletes a project_type."
+        
+            }]
+        },
+
+         
+        "task": {
+            "name": "Tasks",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id, name,description,work,slug,hours_needed,extentions,task_status_id,project_id,start_date,end_date,created_by<\/code>",
+                "Description": "creates a new Task."
+            },
+            {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id, name,description,work,slug,hours_needed,extentions,task_status_id,project_id,start_date,end_date,created_by<\/code>",
+                "Description": "Edits a Task."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id, name,description,work,slug,hours_needed,extentions,task_status_id,project_id,start_date,end_date,created_by<\/code>",
+                "Description": "Updates a Task."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id, name,description,work,slug,hours_needed,extentions,task_status_id,project_id,start_date,end_date,created_by<\/code>",
+                "Description": "Deletes a Task."
+        
+            }]
+            
+        },
+
+        "tasks_status": {
+            "name": "Tasks_Status",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Creates a new task_status."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Edits a task_status."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Updates a task_status."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Deletes a task_status."
+        
+            }]
+        },
+
+         
+         
+        "teams": {
+            "name": "Teams",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Creates a new team."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Edits a team."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Updates a team."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Deletes a team."
+        
+            }]
+        },
+
+        "teams_role": {
+            "name": "Team_Roles",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Creates a new team_role."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Edits a team_role."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Updates a team_role."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,created_by<\/code>",
+                "Description": "Deletes a team_role."
+        
+            }]
+        },
+
+        "expenses": {
+            "name": "Expenses",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,expenditure_type_id,amount,created_by<\/code>",
+                "Description": "Creates a new expenses."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,expenditure_type_id,amount,created_by<\/code>",
+                "Description": "Edits a expenses."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,expenditure_type_id,amount,created_by<\/code>",
+                "Description": "Updates a expenses."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,expenditure_type_id,amount,created_by<\/code>",
+                "Description": "Deletes a expenses."
+        
+            }]
+        },
+
+        "expenditure_type": {
+            "name": "Expenditure_type",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,created_by<\/code>",
+                "Description": "Creates a new expenses."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,created_by<\/code>",
+                "Description": "Edits a expenses."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,created_by<\/code>",
+                "Description": "Updates a expenses."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description,project_id,created_by<\/code>",
+                "Description": "Deletes a expenses."
+        
+            }]
+        },
+
+
+
+        "user_role": {
+            "name": "User_Role",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Creates a new user_role."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Edits a user_role."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Updates a user_role."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>id,name,description<\/code>",
+                "Description": "Deletes a user_role."
+        
+            }]
+        },
+
+        
+        "user_team_roles": {
+            "name": "User_Team_Roles",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>user_id,team_id,team_role_id<\/code>",
+                "Description": "Creates a new user_team_role."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_id,team_id,team_role_id<\/code>",
+                "Description": "Edits a user_team_role."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_id,team_id,team_role_id<\/code>",
+                "Description": "Updates a user_team_role."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_id,team_id,team_role_id<\/code>",
+                "Description": "Deletes a user_team_role."
+        
+            }]
+        },
+
+         
+        "user_role_permission": {
+            "name": "User_Role_Permission",
+            "api": [{
+                "URL": "<code>\/create\/{id}<\/code>*",
+                "Method": "POST",
+                "Parameters": "<code>user_role_id,permission_id<\/code>",
+                "Description": "Creates  new user_role_permission."
+            }, {
+                "URL": "<code>\/edit\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_role_id,permission_id<\/code>",
+                "Description": "Edits  user_role_permission."
+            },
+            {
+                "URL": "<code>\/update\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_role_id,permission_id\/code>",
+                "Description": "Updates  user_role_permission."
+            },
+             {
+                "URL": "<code>\/Delete\/{id}<\/code>",
+                "Method": "POST",
+                "Parameters": "<code>user_role_id,permission_id<\/code>",
+                "Description": "Deletes  user_role_permission."
+        
+            }]
+        },
+    
+   
         "users": {
             "name": "Users",
             "api": [{
