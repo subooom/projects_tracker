@@ -77,7 +77,7 @@
                 "Description": "Updates a project_type."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description,slug,created_by<\/code>",
                 "Description": "Deletes a project_type."
@@ -107,7 +107,7 @@
                 "Description": "Updates a Task."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id, name,description,work,slug,hours_needed,extentions,task_status_id,project_id,start_date,end_date,created_by<\/code>",
                 "Description": "Deletes a Task."
@@ -136,7 +136,7 @@
                 "Description": "Updates a task_status."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description<\/code>",
                 "Description": "Deletes a task_status."
@@ -166,7 +166,7 @@
                 "Description": "Updates a team."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description,created_by<\/code>",
                 "Description": "Deletes a team."
@@ -194,7 +194,7 @@
                 "Description": "Updates a team_role."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description,created_by<\/code>",
                 "Description": "Deletes a team_role."
@@ -222,7 +222,7 @@
                 "Description": "Updates a expenses."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description,project_id,expenditure_type_id,amount,created_by<\/code>",
                 "Description": "Deletes a expenses."
@@ -250,7 +250,7 @@
                 "Description": "Updates a expenses."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description,project_id,created_by<\/code>",
                 "Description": "Deletes a expenses."
@@ -280,7 +280,7 @@
                 "Description": "Updates a user_role."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>id,name,description<\/code>",
                 "Description": "Deletes a user_role."
@@ -309,7 +309,7 @@
                 "Description": "Updates a user_team_role."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>user_id,team_id,team_role_id<\/code>",
                 "Description": "Deletes a user_team_role."
@@ -338,7 +338,7 @@
                 "Description": "Updates  user_role_permission."
             },
              {
-                "URL": "<code>\/Delete\/{id}<\/code>",
+                "URL": "<code>\/delete\/{id}<\/code>",
                 "Method": "POST",
                 "Parameters": "<code>user_role_id,permission_id<\/code>",
                 "Description": "Deletes  user_role_permission."
