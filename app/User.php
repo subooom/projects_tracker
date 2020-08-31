@@ -38,6 +38,10 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
+    public function setRole($name) {
+        $this->role_id = \App\UserRole::where('name', 'LIKE', $name)->first()->id;
+    }
+
     public function role() {
         return $this->belongsTo(\App\UserRole::class, 'role_id', 'id');
     }

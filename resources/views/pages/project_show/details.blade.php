@@ -243,7 +243,7 @@
             <h3>Expenses Breakdown</h3>
             <div class="expensesitems">
                 <div class="items" style="margin-top:20px">
-                <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i> &nbsp; Prime super shop 
+                <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i> &nbsp; Prime super shop
                     <span style="color:rgb(240, 130, 146)"> $140 </span></p>
                     <p> Grocery</p>
                 </div>
@@ -269,7 +269,7 @@
                 </div>
 
                 <div class="items" style="margin-top:25px">
-                    <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i> 
+                    <i class="fas fa-store" style="color:rgb(240, 130, 146)"></i>
                     &nbsp; Prime super shop
                     <span style="color:rgb(240, 130, 146);font-size:15px"> $140 </span></p>
                      <p>Grocery</p>
@@ -280,29 +280,6 @@
 
     <br />
     <br />
-//     <div style="position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     right: 0;
-//     left: 0;
-//     z-index: 999;
-//     background-color: rgba(0,0,0, .5);
-//     display: flex;
-//     justify-content: center;
-//     align-items: center">
-    
-// <div style="height: 300px; width:600px; background-color:white; border-radius:15px">
-//   <form >
-//     <label for="Lname" class="last">Last Project</label>
-//     <input type="text" name="lastproject" class="name" placeholder="Your previous project..">
-// ​
-//     <label for="Nname" class="new">New Project</label>
-//     <input type="text"  name="newproject" class="name"  placeholder="Your new project..">
-// ​
-//     <input type="submit" class="submit" value="Submit">
-//   </form>
-// </div>
-//     </div>
 
     </div>
 </div>

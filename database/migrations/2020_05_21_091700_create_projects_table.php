@@ -24,8 +24,8 @@ class CreateProjectsTable extends Migration
             $table->string('budget_currency');
             $table->unsignedBigInteger('project_type_id');
             $table->unsignedBigInteger('created_by');
-            $table->unsignedBigInteger('team_id');
-            $table->string('status');
+            $table->unsignedBigInteger('team_id')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

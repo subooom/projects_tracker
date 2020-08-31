@@ -14,10 +14,18 @@ class AuthController extends Controller
    *
    * @return boolean
    */
-    public function signIn($request){
-      dd($request);
+    public function signIn($id){
+      return response()->json(Auth::loginUsingId($id, true));
     }
 
+    public function isUsernameUnique($username) {
+        $user = User::where('username', '=', $username)->first();
+
+        if ($user === null) {
+          return response()->json(['is-username-unique' => true]);
+        }
+        return response()->json(['is-username-unique' => false]);
+    }
     /**
      * IsLoggedIn for checking if the user is logged in or not.
      *
@@ -25,29 +33,33 @@ class AuthController extends Controller
      */
 
     public function isLoggedIn(){
-      $isLoggedIn = Auth::check();
-      $headers = [
-        'method' => 'GET',
-        'message' => 'User is '. $isLoggedIn ? 'logged in!':'not logged in',
-        'code' => 200
-      ];
-      $data = [
-        'is-logged-in' => $isLoggedIn
-      ];
+        $isLoggedIn = Auth::check();
+        $headers = [
+          'method' => 'GET',
+          'message' => 'User is '. $isLoggedIn ? 'logged in!':'not logged in',
+          'code' => 200
+        ];
+        $data = [
+          'is-logged-in' => $isLoggedIn
+        ];
 
-      return response()->json(['data' => $data, 'headers' => $headers]);
-    }
+        return response()->json(['data' => $data, 'headers' => $headers]);
+      }
 
     public function isNewUser($email){
 
-      $headers = [
-        'method' => 'GET',
-        'message' => 'All users fetched!',
-        'code' => 200
-      ];
-      $data = [
-        'is-new-user' => User::where('email', '=', $email)->get()->toArray() === []
-      ];
+      $user = User::where('email', '=', $email)->get()->toArray();
+
+      if($user === []){
+          $data = [
+            'is-new-user' => true,
+          ];
+      } else {
+        $data = [
+            'is-new-user' => false,
+            'user' => $user,
+        ];
+      }
 
       return response()->json($data);
     }

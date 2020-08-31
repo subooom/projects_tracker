@@ -2,7 +2,7 @@
   <div class="side-nav">
     <div class="logo-panel">
       <img class="logo" src="/logo/logo_icon.png" />
-      <h2 class="project-title">Projects Tracker</h2>
+      <h2 class="project-title">Radicle Flow</h2>
     </div>
     <div class="nav-links">
       <a class="active" href="/{{$slug}}/details"><i class="fa fa-info-circle"></i><span>Details</span></a>

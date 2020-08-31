@@ -13,13 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Our main route for the vue app, if you go to vue.blade.php you will see a div with id of #app, vue works like react.
-// Route::get('/', function(){
-//     return view('paradiseinself');
-//   });
-  Route::get('/', 'PagesController@index');
 
 
+Route::get('/', 'PagesController@index');
 // We will modify the following routes bistari, ahile chai /old-app ma gais bhaney puranai app aaucha
 Route::get('/old-app','ProjectController@index');
 Route::get('/about','PagesController@about');
@@ -33,55 +29,31 @@ Route::get('/{slug}/erd','ProjectShowController@erd');
 Route::get('/{slug}/progress','ProjectShowController@progress');
 Route::get('/{slug}/settings','ProjectShowController@settings');
 
-
-
-
-
-
-
 // REST API
 
-// Route::prefix('api') leh tes vitra vako sab routes ko agadi /api/ haldincha
-
 Route::prefix('api')->group(function (){
-    // API Documentation Page
-    Route::get('/', 'PagesController@api');
+
+    Route::get('get-cross-ref-token', function(){
+        return response()->json(csrf_token());
+    });
 
     // Auth endpoints
-    Route::prefix('auth')->group(function (){
-
-      Route::get('sign-in','AuthController@signIn');
+    Route::prefix('auth')->group(function ()
+    {
+      Route::get('sign-in/{id}','AuthController@signIn');
+      Route::get('is-username-unique/{username}','AuthController@isUsernameUnique');
       Route::get('is-logged-in','AuthController@isLoggedIn');
       Route::get('is-new-user/{email}','AuthController@isNewUser');
-
     });
 
 
     // User endpoints
 
-    Route::prefix('users')->group(function (){
-
+    Route::prefix('users')->group(function ()
+    {
+      Route::post('store','UserController@store');
       Route::get('fetch-all','UserController@index');
-
-    });
-
-    // Projects endpoints
-
-    Route::prefix('projects')->group(function (){
-
-      Route::get('fetch-all','ProjectController@fetchAll');
-
-      Route::get('fetch/{slug}','ProjectController@fetch');
-
-      Route::post('store','ProjectController@store');
-
-      Route::post('update/{slug}','ProjectController@update');
-
-      Route::delete('delete/{slug}','ProjectController@destroy');
-
     });
 });
 
 ?>
-
-

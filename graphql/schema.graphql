@@ -11,4 +11,6 @@ scalar Email @scalar(class: "MLL\\GraphQLScalars\\Email")
 
 type Query
 
+type Mutation
+
 #import */*.graphql

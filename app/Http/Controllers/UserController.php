@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\User as UserResource;
+use Exception;
 
 class UserController extends Controller
 {
@@ -43,7 +44,33 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=> 'required',
+            'avatar'=>'required',
+            'username'=>'required|min:5|max:15',
+            'email'=>'required',
+            'password'=>'required',
+        ]);
+
+        $user = new \App\User;
+
+        $user->name = $request->input('name');
+
+        $user->profile_picture = $request->input('avatar');
+
+        $user->username = $request->input('username');
+
+        $user->email = $request->input('email');
+
+        $user->enabled = 1;
+
+        $user->password = bcrypt($request->input('password'));
+
+        $user->setRole('User');
+
+        $user->save();
+
+        return response()->json($user);
     }
 
     /**

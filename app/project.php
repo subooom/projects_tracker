@@ -6,6 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $fillable = [
+        'title',
+        'description',
+        'slug',
+        'start_date',
+        'end_date',
+        'budget',
+        'budget_currency',
+        'project_type_id',
+        'created_by'
+    ];
+
     public function creator() {
         return $this->belongsTo('App\User', 'created_by', 'id');
     }

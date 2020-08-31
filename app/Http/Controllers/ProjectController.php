@@ -12,6 +12,14 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index(){
+        return view('pages.project_show.details')->with('slug', 'project_one');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
 
     public function fetchAll()
     {
